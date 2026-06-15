@@ -523,6 +523,34 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
 endobj
 16 0 obj
+<< /Length 838 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 960.00 540.00 re f
+0.000 0.282 0.569 rg
+0.00 0.00 20.00 540.00 re f
+0.855 0.161 0.110 rg
+20.00 0.00 8.00 540.00 re f
+1.000 0.824 0.000 rg
+138.00 414.00 684.00 2.00 re f
+0.000 0.282 0.569 rg
+BT /F2 52 Tf 328.00 312.00 Td (Thank you) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 17 Tf 192.00 263.00 Td (Discussion prompts: Which Ontario diagnostic should we prioritize) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 17 Tf 192.00 238.00 Td (first? What e-commerce constraint is most urgent? What additional) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 17 Tf 192.00 213.00 Td (data would most change the recommendation?) Tj ET
+0.855 0.161 0.110 rg
+BT /F2 18 Tf 338.00 102.00 Td (Questions & discussion) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 8 Tf 45.00 22.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
+endobj
+18 0 obj
 << /Length 2700 >>
 stream
 1.000 1.000 1.000 rg
@@ -592,34 +620,6 @@ BT /F2 10 Tf 76.00 24.20 Td (-) Tj ET
 BT /F1 10 Tf 94.00 24.20 Td (Recommendations are directional because margin, store-count, price-index, and customer-level data are not included.) Tj ET
 endstream
 endobj
-17 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
-endobj
-18 0 obj
-<< /Length 838 >>
-stream
-1.000 1.000 1.000 rg
-0.00 0.00 960.00 540.00 re f
-0.000 0.282 0.569 rg
-0.00 0.00 20.00 540.00 re f
-0.855 0.161 0.110 rg
-20.00 0.00 8.00 540.00 re f
-1.000 0.824 0.000 rg
-138.00 414.00 684.00 2.00 re f
-0.000 0.282 0.569 rg
-BT /F2 52 Tf 328.00 312.00 Td (Thank you) Tj ET
-0.137 0.153 0.173 rg
-BT /F1 17 Tf 192.00 263.00 Td (Discussion prompts: Which Ontario diagnostic should we prioritize) Tj ET
-0.137 0.153 0.173 rg
-BT /F1 17 Tf 192.00 238.00 Td (first? What e-commerce constraint is most urgent? What additional) Tj ET
-0.137 0.153 0.173 rg
-BT /F1 17 Tf 192.00 213.00 Td (data would most change the recommendation?) Tj ET
-0.855 0.161 0.110 rg
-BT /F2 18 Tf 338.00 102.00 Td (Questions & discussion) Tj ET
-0.404 0.439 0.486 rg
-BT /F1 8 Tf 45.00 22.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
-endstream
-endobj
 xref
 0 19
 0000000000 65535 f
@@ -639,8 +639,8 @@ xref
 0000012907 00000 n
 0000019128 00000 n
 0000019266 00000 n
-0000022018 00000 n
-0000022156 00000 n
+0000020155 00000 n
+0000020293 00000 n
 trailer
 << /Size 19 /Root 1 0 R >>
 startxref

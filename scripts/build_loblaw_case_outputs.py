@@ -896,6 +896,12 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
+  <section class="slide thanks">
+    <h1>Thank you</h1>
+    <p>Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?</p>
+    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
+  </section>
+
   <section class="slide">
     <h1>Appendix: supporting analysis files</h1>
     <p class="subtitle">Use these files to validate the story, answer SQL questions, and reproduce the deck.</p>
@@ -920,12 +926,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
         </ul>
       </div>
     </div>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
-  </section>
-
-  <section class="slide thanks">
-    <h1>Thank you</h1>
-    <p>Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?</p>
     <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 </main>
@@ -996,23 +996,23 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Emphasize KPIs: weekly regional share, RCSS Ontario sales/traffic/basket, e-commerce penetration gap, fulfillment rate, price index, promo ROI, and margin mix.
 - Close with data needs: store-count normalization, margin, loyalty cohorts, online capacity, competitor density, and price-index detail.
 
-## Slide 6 - Appendix: supporting analysis files
-
-**Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility.
-
-- Point to `supporting_analysis.md` for assumptions, key outputs, the regional scorecard, and numeric SQL answers.
-- Point to `metric_summary.csv` for the KPI table by division, banner, region, and industry market.
-- Point to `sql_task_answers.sql` for the five requested SQL queries and the workbook-derived outputs.
-- Mention that `super_market_strategy_analytics_case.xlsx` is the source data and `build_loblaw_case_outputs.py` regenerates all outputs.
-- Use this slide only if asked for detail during Q&A; do not spend much time on it in the main presentation.
-
-## Slide 7 - Thank you
+## Slide 6 - Thank you
 
 **Core message:** Close with a clear invitation for discussion and next-step prioritization.
 
 - Thank the audience and invite questions.
 - Offer three prompts if Q&A needs structure: Ontario diagnostic priority, most urgent e-commerce constraint, and highest-value incremental data cut.
 - Reinforce that the recommendations are directional and should be validated with margin, store-count, price-index, and customer-level data.
+
+## Slide 7 - Appendix: supporting analysis files
+
+**Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility after the main close.
+
+- Point to `supporting_analysis.md` for assumptions, key outputs, the regional scorecard, and numeric SQL answers.
+- Point to `metric_summary.csv` for the KPI table by division, banner, region, and industry market.
+- Point to `sql_task_answers.sql` for the five requested SQL queries and the workbook-derived outputs.
+- Mention that `super_market_strategy_analytics_case.xlsx` is the source data and `build_loblaw_case_outputs.py` regenerates all outputs.
+- Use this slide only if asked for detail during Q&A; it is intentionally placed after the thank-you slide as backup.
 
 ## Suggested 15-minute flow
 
@@ -1021,7 +1021,8 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Slide 3: 3 minutes - KPI diagnosis and why "more promo" is not the only answer.
 - Slide 4: 3 minutes - regional and banner prioritization.
 - Slide 5: 3 minutes - actions, KPIs, and next analysis.
-- Slides 6-7: 1 minute - appendix pointer and thank-you/Q&A transition.
+- Slide 6: 1 minute - thank-you/Q&A transition.
+- Slide 7: backup - appendix pointer if asked for supporting detail.
 - Buffer: 1 minute - assumptions and Q&A setup.
 """
     with open(TALKING_POINTS_PATH, "w") as handle:
@@ -1437,6 +1438,26 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.text(75, 472, "Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.", size=11, bold=True, color=DARK)
     doc.add_page(page)
 
+    # Thank-you page
+    page = PdfPage()
+    page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
+    page.rect(0, 0, 20, page.height, fill=BLUE)
+    page.rect(20, 0, 8, page.height, fill=RED)
+    page.rect(138, 124, 684, 2, fill=YELLOW)
+    page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
+    page.wrapped_text(
+        192,
+        260,
+        "Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?",
+        600,
+        size=17,
+        color=DARK,
+        leading=25,
+    )
+    page.text(338, 420, "Questions & discussion", size=18, bold=True, color=RED)
+    page.text(45, 510, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
+    doc.add_page(page)
+
     # Appendix
     page = slide_base(
         "Appendix: supporting analysis files",
@@ -1469,26 +1490,6 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         width=790,
         size=10,
     )
-    doc.add_page(page)
-
-    # Thank-you page
-    page = PdfPage()
-    page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
-    page.rect(0, 0, 20, page.height, fill=BLUE)
-    page.rect(20, 0, 8, page.height, fill=RED)
-    page.rect(138, 124, 684, 2, fill=YELLOW)
-    page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
-    page.wrapped_text(
-        192,
-        260,
-        "Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?",
-        600,
-        size=17,
-        color=DARK,
-        leading=25,
-    )
-    page.text(338, 420, "Questions & discussion", size=18, bold=True, color=RED)
-    page.text(45, 510, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     doc.add_page(page)
 
     doc.save(PDF_PATH)
