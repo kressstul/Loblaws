@@ -782,6 +782,39 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       font-size: 22px;
       color: var(--muted);
     }}
+    .agenda-list {{
+      margin-top: 34px;
+      display: grid;
+      gap: 18px;
+    }}
+    .agenda-item {{
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+    }}
+    .agenda-number {{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      font-size: 20px;
+    }}
+    .agenda-item h2 {{
+      margin: 0 0 4px;
+    }}
+    .agenda-item p {{
+      margin: 0;
+      color: var(--muted);
+    }}
     .source {{
       position: absolute;
       left: 76px;
@@ -805,6 +838,18 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       Presented by: Krystal Ng<br>
       Context: Discount Division prior to Hard Discount<br>
       Date: June 2026
+    </div>
+    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
+  </section>
+
+  <section class="slide">
+    <h1>Agenda</h1>
+    <p class="subtitle">A focused path from headline performance to recommended action.</p>
+    <div class="agenda-list">
+      <div class="agenda-item"><div class="agenda-number">1</div><div><h2>Executive takeaway</h2><p>How 2020 growth masked national share loss.</p></div></div>
+      <div class="agenda-item"><div class="agenda-number">2</div><div><h2>Performance scorecard</h2><p>Sales, promo, e-commerce, and industry comparison.</p></div></div>
+      <div class="agenda-item"><div class="agenda-number">3</div><div><h2>Priority focus areas</h2><p>Why Ontario/RCSS is the near-term priority and Atlantic is the playbook.</p></div></div>
+      <div class="agenda-item"><div class="agenda-number">4</div><div><h2>Actions, KPIs, and Q&A</h2><p>Immediate workstreams, success measures, thank-you, and appendix backup.</p></div></div>
     </div>
     <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
@@ -944,7 +989,7 @@ def write_talking_points(metrics: Dict[str, object]) -> None:
     banners = metrics["banners"]
     content = f"""# Slide talking points - Loblaw Discount Division case
 
-Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages are brief framing/transition slides; the core strategy discussion remains the four analysis slides.
+Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-you pages are brief framing/transition slides; the core strategy discussion remains the four analysis slides.
 
 ## Slide 1 - Title page
 
@@ -952,9 +997,18 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 
 - Introduce the case scope: Discount Division performance in 2020, prior to Hard Discount.
 - Preview the structure: headline performance, KPI diagnosis, regional focus, immediate actions, and appendix.
-- Transition: "I will start with the executive takeaway and then show the analysis that supports it."
+- Transition: "I will use a short agenda to frame how the story builds."
 
-## Slide 2 - Discount Division 2020: growth masked share loss
+## Slide 2 - Agenda
+
+**Core message:** Orient the audience to the storyline before moving into the analysis.
+
+- Explain that the presentation moves from the executive takeaway to diagnostics, focus areas, and actions.
+- Keep this slide brief; it is a navigation slide, not an analysis slide.
+- Mention that the appendix sits after the thank-you slide as backup for calculations, assumptions, and SQL logic.
+- Transition: "Starting with the headline, the division grew, but the market grew faster."
+
+## Slide 3 - Discount Division 2020: growth masked share loss
 
 **Core message:** The business grew in absolute dollars, but underperformed the broader market, so the strategic question is share recovery rather than demand creation.
 
@@ -964,7 +1018,7 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Frame the recommendation: recover share in Ontario/RCSS, scale e-commerce, and maintain value credibility.
 - Transition: "To understand where to act, I first looked at whether the gap was broad-based or concentrated."
 
-## Slide 3 - Scorecard: growth was strong, relative capture weaker
+## Slide 4 - Scorecard: growth was strong, relative capture weaker
 
 **Core message:** The division's main issue was weaker relative capture of a growing market, not weak category demand.
 
@@ -975,7 +1029,7 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Mention that every discount market peaked in e-commerce sales during WE Mar 14 20, suggesting a stress point around capacity and fulfillment.
 - Transition: "The national average hides a clear regional priority."
 
-## Slide 4 - Focus areas: Ontario/RCSS priority; Atlantic playbook
+## Slide 5 - Focus areas: Ontario/RCSS priority; Atlantic playbook
 
 **Core message:** Ontario is the largest immediate problem, while Atlantic is a small-base success case worth learning from.
 
@@ -986,7 +1040,7 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Balance the story with Atlantic: No Frills Atlantic grew {pct(banners['NO FRILLS ATLANTIC']['sales_growth'])} and gained share, so it can provide execution lessons.
 - Transition: "Based on this, I would organize action into four immediate workstreams."
 
-## Slide 5 - Immediate actions and KPIs
+## Slide 6 - Immediate actions and KPIs
 
 **Core message:** The response should combine targeted share recovery, e-commerce execution, value discipline, and scaling proven local playbooks.
 
@@ -997,7 +1051,7 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Emphasize KPIs: weekly regional share, RCSS Ontario sales/traffic/basket, e-commerce penetration gap, fulfillment rate, price index, promo ROI, and margin mix.
 - Close with data needs: store-count normalization, margin, loyalty cohorts, online capacity, competitor density, and price-index detail.
 
-## Slide 6 - Thank you
+## Slide 7 - Thank you
 
 **Core message:** Close with a clear invitation for discussion and next-step prioritization.
 
@@ -1005,7 +1059,7 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 - Offer three prompts if Q&A needs structure: Ontario diagnostic priority, most urgent e-commerce constraint, and highest-value incremental data cut.
 - Reinforce that the recommendations are directional and should be validated with margin, store-count, price-index, and customer-level data.
 
-## Slide 7 - Appendix: supporting analysis files
+## Slide 8 - Appendix: supporting analysis files
 
 **Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility after the main close.
 
@@ -1018,12 +1072,13 @@ Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages 
 ## Suggested 15-minute flow
 
 - Slide 1: 1 minute - title, context, and agenda.
-- Slide 2: 3 minutes - headline, problem framing, recommendation.
-- Slide 3: 3 minutes - KPI diagnosis and why "more promo" is not the only answer.
-- Slide 4: 3 minutes - regional and banner prioritization.
-- Slide 5: 3 minutes - actions, KPIs, and next analysis.
-- Slide 6: 1 minute - thank-you/Q&A transition.
-- Slide 7: backup - appendix pointer if asked for supporting detail.
+- Slide 2: 1 minute - agenda and story arc.
+- Slide 3: 3 minutes - headline, problem framing, recommendation.
+- Slide 4: 3 minutes - KPI diagnosis and why "more promo" is not the only answer.
+- Slide 5: 3 minutes - regional and banner prioritization.
+- Slide 6: 2 minutes - actions, KPIs, and next analysis.
+- Slide 7: 1 minute - thank-you/Q&A transition.
+- Slide 8: backup - appendix pointer if asked for supporting detail.
 - Buffer: 1 minute - assumptions and Q&A setup.
 """
     with open(TALKING_POINTS_PATH, "w") as handle:
@@ -1239,6 +1294,27 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.text(184, 452, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
     page.text(184, 472, "Date: June 2026", size=11, color=GREY)
     page.text(162, 506, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
+    doc.add_page(page)
+
+    # Agenda
+    page = slide_base(
+        "Agenda",
+        "A focused path from headline performance to recommended action.",
+    )
+    agenda_items = [
+        ("1", "Executive takeaway", "How 2020 growth masked national share loss."),
+        ("2", "Performance scorecard", "Sales, promo, e-commerce, and industry comparison."),
+        ("3", "Priority focus areas", "Why Ontario/RCSS is the near-term priority and Atlantic is the playbook."),
+        ("4", "Actions, KPIs, and Q&A", "Immediate workstreams, success measures, thank-you, and appendix backup."),
+    ]
+    y = 122
+    for number, title, description in agenda_items:
+        page.rect(70, y, 820, 74, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+        page.rect(94, y + 17, 40, 40, fill=BLUE)
+        page.text(108, y + 27, number, size=18, bold=True, color=(255, 255, 255))
+        page.text(160, y + 17, title, size=17, bold=True, color=DARK)
+        page.wrapped_text(160, y + 43, description, 650, size=12, color=GREY, leading=16)
+        y += 86
     doc.add_page(page)
 
     # Strategy slide 1

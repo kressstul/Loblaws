@@ -4,7 +4,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R] /Count 8 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -57,6 +57,72 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
+<< /Length 2096 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 960.00 540.00 re f
+0.000 0.282 0.569 rg
+0.00 0.00 14.00 540.00 re f
+0.855 0.161 0.110 rg
+14.00 0.00 6.00 540.00 re f
+0.137 0.153 0.173 rg
+BT /F2 26 Tf 45.00 490.00 Td (Agenda) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 12 Tf 46.00 470.00 Td (A focused path from headline performance to recommended action.) Tj ET
+0.784 0.808 0.835 RG 0.70 w
+45.00 456.00 m 915.00 456.00 l S
+0.404 0.439 0.486 rg
+BT /F1 8 Tf 45.00 22.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
+0.973 0.980 0.988 rg
+0.784 0.808 0.835 RG 0.80 w
+70.00 344.00 820.00 74.00 re B
+0.000 0.282 0.569 rg
+94.00 361.00 40.00 40.00 re f
+1.000 1.000 1.000 rg
+BT /F2 18 Tf 108.00 373.00 Td (1) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 17 Tf 160.00 384.00 Td (Executive takeaway) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 12 Tf 160.00 363.00 Td (How 2020 growth masked national share loss.) Tj ET
+0.973 0.980 0.988 rg
+0.784 0.808 0.835 RG 0.80 w
+70.00 258.00 820.00 74.00 re B
+0.000 0.282 0.569 rg
+94.00 275.00 40.00 40.00 re f
+1.000 1.000 1.000 rg
+BT /F2 18 Tf 108.00 287.00 Td (2) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 17 Tf 160.00 298.00 Td (Performance scorecard) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 12 Tf 160.00 277.00 Td (Sales, promo, e-commerce, and industry comparison.) Tj ET
+0.973 0.980 0.988 rg
+0.784 0.808 0.835 RG 0.80 w
+70.00 172.00 820.00 74.00 re B
+0.000 0.282 0.569 rg
+94.00 189.00 40.00 40.00 re f
+1.000 1.000 1.000 rg
+BT /F2 18 Tf 108.00 201.00 Td (3) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 17 Tf 160.00 212.00 Td (Priority focus areas) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 12 Tf 160.00 191.00 Td (Why Ontario/RCSS is the near-term priority and Atlantic is the playbook.) Tj ET
+0.973 0.980 0.988 rg
+0.784 0.808 0.835 RG 0.80 w
+70.00 86.00 820.00 74.00 re B
+0.000 0.282 0.569 rg
+94.00 103.00 40.00 40.00 re f
+1.000 1.000 1.000 rg
+BT /F2 18 Tf 108.00 115.00 Td (4) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 17 Tf 160.00 126.00 Td (Actions, KPIs, and Q&A) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 12 Tf 160.00 105.00 Td (Immediate workstreams, success measures, thank-you, and appendix backup.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
 << /Length 3045 >>
 stream
 1.000 1.000 1.000 rg
@@ -131,10 +197,10 @@ BT /F2 13 Tf 75.00 88.08 Td (-) Tj ET
 BT /F1 13 Tf 93.00 88.08 Td (No Frills Atlantic is a small-base success case and should be mined for transferable execution lessons.) Tj ET
 endstream
 endobj
-9 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
 endobj
-10 0 obj
+12 0 obj
 << /Length 3445 >>
 stream
 1.000 1.000 1.000 rg
@@ -228,10 +294,10 @@ BT /F1 12 Tf 96.00 59.56 Td (E-commerce penetration is already material at 4.6%;
 BT /F1 12 Tf 96.00 44.20 Td (capture.) Tj ET
 endstream
 endobj
-11 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
 endobj
-12 0 obj
+14 0 obj
 << /Length 4003 >>
 stream
 1.000 1.000 1.000 rg
@@ -348,10 +414,10 @@ BT /F1 11 Tf 524.00 79.00 Td (Division penetration: 4.6%; industry: 5.0%.) Tj ET
 BT /F1 11 Tf 524.00 59.00 Td (Treat e-commerce as a share lever, not only a channel KPI.) Tj ET
 endstream
 endobj
-13 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
 endobj
-14 0 obj
+16 0 obj
 << /Length 6169 >>
 stream
 1.000 1.000 1.000 rg
@@ -521,10 +587,10 @@ BT /F1 10 Tf 762.00 198.00 Td (execution scorecards.) Tj ET
 BT /F2 11 Tf 75.00 57.00 Td (Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.) Tj ET
 endstream
 endobj
-15 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
 endobj
-16 0 obj
+18 0 obj
 << /Length 838 >>
 stream
 1.000 1.000 1.000 rg
@@ -549,10 +615,10 @@ BT /F2 18 Tf 338.00 102.00 Td (Questions & discussion) Tj ET
 BT /F1 8 Tf 45.00 22.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
 endstream
 endobj
-17 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 20 0 R >>
 endobj
-18 0 obj
+20 0 obj
 << /Length 2700 >>
 stream
 1.000 1.000 1.000 rg
@@ -623,28 +689,30 @@ BT /F1 10 Tf 94.00 24.20 Td (Recommendations are directional because margin, sto
 endstream
 endobj
 xref
-0 19
+0 21
 0000000000 65535 f
 0000000015 00000 n
 0000000064 00000 n
-0000000161 00000 n
-0000000231 00000 n
-0000000306 00000 n
-0000000442 00000 n
-0000001793 00000 n
-0000001929 00000 n
-0000005025 00000 n
-0000005162 00000 n
-0000008659 00000 n
-0000008797 00000 n
-0000012852 00000 n
-0000012990 00000 n
-0000019211 00000 n
-0000019349 00000 n
-0000020238 00000 n
-0000020376 00000 n
+0000000168 00000 n
+0000000238 00000 n
+0000000313 00000 n
+0000000449 00000 n
+0000001800 00000 n
+0000001936 00000 n
+0000004083 00000 n
+0000004220 00000 n
+0000007317 00000 n
+0000007455 00000 n
+0000010952 00000 n
+0000011090 00000 n
+0000015145 00000 n
+0000015283 00000 n
+0000021504 00000 n
+0000021642 00000 n
+0000022531 00000 n
+0000022669 00000 n
 trailer
-<< /Size 19 /Root 1 0 R >>
+<< /Size 21 /Root 1 0 R >>
 startxref
-23128
+25421
 %%EOF
