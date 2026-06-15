@@ -32,6 +32,7 @@ METRICS_PATH = os.path.join(OUTPUT_DIR, "metric_summary.csv")
 ANALYSIS_PATH = os.path.join(OUTPUT_DIR, "supporting_analysis.md")
 SQL_PATH = os.path.join(OUTPUT_DIR, "sql_task_answers.sql")
 HTML_PATH = os.path.join(OUTPUT_DIR, "deck_preview.html")
+TALKING_POINTS_PATH = os.path.join(OUTPUT_DIR, "slide_talking_points.md")
 
 XLSX_NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 XLSX_REL = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
@@ -832,6 +833,70 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
         handle.write(content)
 
 
+def write_talking_points(metrics: Dict[str, object]) -> None:
+    division = metrics["division"]
+    industry = metrics["industry_national"]
+    regions = metrics["regions"]
+    banners = metrics["banners"]
+    content = f"""# Slide talking points - Loblaw Discount Division case
+
+Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A and avoids over-explaining the supporting SQL appendix.
+
+## Slide 1 - Discount Division 2020: growth masked share loss
+
+**Core message:** The business grew in absolute dollars, but underperformed the broader market, so the strategic question is share recovery rather than demand creation.
+
+- Open with the headline: Discount Division delivered {money_b(division['sales_2020'])} in 2020 sales and grew {pct(division['sales_growth'])}.
+- Immediately contrast that with industry growth of {pct(industry['sales_growth'])}; this is why growth alone is not enough to call the year a win.
+- Point out the national share decline from {pct(division['share_2019'])} to {pct(division['share_2020'])}, or {pts(division['share_delta'])}.
+- Frame the recommendation: recover share in Ontario/RCSS, scale e-commerce, and maintain value credibility.
+- Transition: "To understand where to act, I first looked at whether the gap was broad-based or concentrated."
+
+## Slide 2 - Scorecard: growth was strong, relative capture weaker
+
+**Core message:** The division's main issue was weaker relative capture of a growing market, not weak category demand.
+
+- Walk through the sales-growth comparison: Discount Division at {pct(division['sales_growth'])} versus industry at {pct(industry['sales_growth'])}.
+- Note that promo penetration was {pct(division['promo_pen_2020'])}, matching the national industry, and down from {pct(division['promo_pen_2019'])} in 2019.
+- Explain implication: the answer should not simply be "promote more"; it should be more targeted value and promo discipline.
+- Highlight e-commerce: division e-commerce sales grew {pct(division['ecom_growth'], 0)} and reached {pct(division['ecom_pen_2020'])} penetration, but industry was {pct(industry['ecom_pen_2020'])}.
+- Mention that every discount market peaked in e-commerce sales during WE Mar 14 20, suggesting a stress point around capacity and fulfillment.
+- Transition: "The national average hides a clear regional priority."
+
+## Slide 3 - Focus areas: Ontario/RCSS priority; Atlantic playbook
+
+**Core message:** Ontario is the largest immediate problem, while Atlantic is a small-base success case worth learning from.
+
+- Start with the regional table: Ontario sales grew only {pct(regions['Ontario']['sales_growth'])}, and share declined {pts(regions['Ontario']['share_delta'])}.
+- Explain why Ontario matters: it is a large market and the decline is concentrated enough to warrant dedicated management attention.
+- Call out banner-level split: No Frills Ontario grew {pct(banners['NO FRILLS ONTARIO']['sales_growth'])}, while RCSS Ontario declined {pct(banners['RCSS ONTARIO']['sales_growth'])}.
+- Position RCSS Ontario as the first diagnostic deep dive: stores, assortment, price gaps, availability, and local competitive pressure.
+- Balance the story with Atlantic: No Frills Atlantic grew {pct(banners['NO FRILLS ATLANTIC']['sales_growth'])} and gained share, so it can provide execution lessons.
+- Transition: "Based on this, I would organize action into four immediate workstreams."
+
+## Slide 4 - Immediate actions and KPIs
+
+**Core message:** The response should combine targeted share recovery, e-commerce execution, value discipline, and scaling proven local playbooks.
+
+- Ontario share reset: deep dive RCSS Ontario store performance, price perception, out-of-stocks, assortment, and competitor overlap.
+- E-commerce capacity: improve pickup/delivery slot availability, substitution quality, and fulfillment reliability in high-demand stores.
+- Value and promo discipline: protect key value items, but move from broad discounting to targeted offers with clear promo ROI.
+- Scale what works: study No Frills Atlantic's local execution and decide what is transferable to similar markets.
+- Emphasize KPIs: weekly regional share, RCSS Ontario sales/traffic/basket, e-commerce penetration gap, fulfillment rate, price index, promo ROI, and margin mix.
+- Close with data needs: store-count normalization, margin, loyalty cohorts, online capacity, competitor density, and price-index detail.
+
+## Suggested 15-minute flow
+
+- Slide 1: 3 minutes - headline, problem framing, recommendation.
+- Slide 2: 4 minutes - KPI diagnosis and why "more promo" is not the only answer.
+- Slide 3: 4 minutes - regional and banner prioritization.
+- Slide 4: 3 minutes - actions, KPIs, and next analysis.
+- Buffer: 1 minute - assumptions and transition to Q&A.
+"""
+    with open(TALKING_POINTS_PATH, "w") as handle:
+        handle.write(content)
+
+
 class PdfPage:
     def __init__(self, width: int = 960, height: int = 540) -> None:
         self.width = width
@@ -1217,6 +1282,7 @@ def build_outputs() -> None:
     write_analysis(metrics)
     write_sql(metrics)
     write_html_preview(metrics)
+    write_talking_points(metrics)
     write_pdf(metrics)
 
 
