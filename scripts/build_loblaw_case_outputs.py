@@ -802,6 +802,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     <p class="subtitle">A 15-minute discussion on performance, priority opportunities, and immediate actions.</p>
     <div class="title-meta">
       Prepared for: Strategy Manager discussion<br>
+      Presented by: Krystal Ng<br>
       Context: Discount Division prior to Hard Discount<br>
       Date: June 2026
     </div>
@@ -1231,11 +1232,12 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         color=GREY,
         leading=24,
     )
-    page.rect(162, 360, 430, 104, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+    page.rect(162, 352, 430, 124, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
     page.text(184, 382, "Prepared for", size=11, bold=True, color=GREY)
     page.text(184, 406, "Strategy Manager discussion", size=16, bold=True, color=DARK)
-    page.text(184, 432, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
-    page.text(184, 452, "Date: June 2026", size=11, color=GREY)
+    page.text(184, 432, "Presented by: Krystal Ng", size=11, color=GREY)
+    page.text(184, 452, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
+    page.text(184, 472, "Date: June 2026", size=11, color=GREY)
     page.text(162, 506, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     doc.add_page(page)
 

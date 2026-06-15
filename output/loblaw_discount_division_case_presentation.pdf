@@ -16,7 +16,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 1217 >>
+<< /Length 1300 >>
 stream
 1.000 1.000 1.000 rg
 0.00 0.00 960.00 540.00 re f
@@ -38,15 +38,17 @@ BT /F1 18 Tf 162.00 244.00 Td (A 15-minute discussion on performance, priority o
 BT /F1 18 Tf 162.00 220.00 Td (immediate actions.) Tj ET
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-162.00 76.00 430.00 104.00 re B
+162.00 64.00 430.00 124.00 re B
 0.404 0.439 0.486 rg
 BT /F2 11 Tf 184.00 147.00 Td (Prepared for) Tj ET
 0.137 0.153 0.173 rg
 BT /F2 16 Tf 184.00 118.00 Td (Strategy Manager discussion) Tj ET
 0.404 0.439 0.486 rg
-BT /F1 11 Tf 184.00 97.00 Td (Context: Discount Division prior to Hard Discount) Tj ET
+BT /F1 11 Tf 184.00 97.00 Td (Presented by: Krystal Ng) Tj ET
 0.404 0.439 0.486 rg
-BT /F1 11 Tf 184.00 77.00 Td (Date: June 2026) Tj ET
+BT /F1 11 Tf 184.00 77.00 Td (Context: Discount Division prior to Hard Discount) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 11 Tf 184.00 57.00 Td (Date: June 2026) Tj ET
 0.404 0.439 0.486 rg
 BT /F1 8 Tf 162.00 26.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
 endstream
@@ -629,20 +631,20 @@ xref
 0000000231 00000 n
 0000000306 00000 n
 0000000442 00000 n
-0000001710 00000 n
-0000001846 00000 n
-0000004942 00000 n
-0000005079 00000 n
-0000008576 00000 n
-0000008714 00000 n
-0000012769 00000 n
-0000012907 00000 n
-0000019128 00000 n
-0000019266 00000 n
-0000020155 00000 n
-0000020293 00000 n
+0000001793 00000 n
+0000001929 00000 n
+0000005025 00000 n
+0000005162 00000 n
+0000008659 00000 n
+0000008797 00000 n
+0000012852 00000 n
+0000012990 00000 n
+0000019211 00000 n
+0000019349 00000 n
+0000020238 00000 n
+0000020376 00000 n
 trailer
 << /Size 19 /Root 1 0 R >>
 startxref
-23045
+23128
 %%EOF
