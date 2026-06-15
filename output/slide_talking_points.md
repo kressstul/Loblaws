@@ -1,8 +1,16 @@
 # Slide talking points - Loblaw Discount Division case
 
-Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A and avoids over-explaining the supporting SQL appendix.
+Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages are brief framing/transition slides; the core strategy discussion remains the four analysis slides.
 
-## Slide 1 - Discount Division 2020: growth masked share loss
+## Slide 1 - Title page
+
+**Core message:** Set context quickly: this is a focused Discount Division performance review, not a full enterprise strategy.
+
+- Introduce the case scope: Discount Division performance in 2020, prior to Hard Discount.
+- Preview the structure: headline performance, KPI diagnosis, regional focus, immediate actions, and appendix.
+- Transition: "I will start with the executive takeaway and then show the analysis that supports it."
+
+## Slide 2 - Discount Division 2020: growth masked share loss
 
 **Core message:** The business grew in absolute dollars, but underperformed the broader market, so the strategic question is share recovery rather than demand creation.
 
@@ -12,7 +20,7 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Frame the recommendation: recover share in Ontario/RCSS, scale e-commerce, and maintain value credibility.
 - Transition: "To understand where to act, I first looked at whether the gap was broad-based or concentrated."
 
-## Slide 2 - Scorecard: growth was strong, relative capture weaker
+## Slide 3 - Scorecard: growth was strong, relative capture weaker
 
 **Core message:** The division's main issue was weaker relative capture of a growing market, not weak category demand.
 
@@ -23,7 +31,7 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Mention that every discount market peaked in e-commerce sales during WE Mar 14 20, suggesting a stress point around capacity and fulfillment.
 - Transition: "The national average hides a clear regional priority."
 
-## Slide 3 - Focus areas: Ontario/RCSS priority; Atlantic playbook
+## Slide 4 - Focus areas: Ontario/RCSS priority; Atlantic playbook
 
 **Core message:** Ontario is the largest immediate problem, while Atlantic is a small-base success case worth learning from.
 
@@ -34,7 +42,7 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Balance the story with Atlantic: No Frills Atlantic grew 38.4% and gained share, so it can provide execution lessons.
 - Transition: "Based on this, I would organize action into four immediate workstreams."
 
-## Slide 4 - Immediate actions and KPIs
+## Slide 5 - Immediate actions and KPIs
 
 **Core message:** The response should combine targeted share recovery, e-commerce execution, value discipline, and scaling proven local playbooks.
 
@@ -45,10 +53,30 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Emphasize KPIs: weekly regional share, RCSS Ontario sales/traffic/basket, e-commerce penetration gap, fulfillment rate, price index, promo ROI, and margin mix.
 - Close with data needs: store-count normalization, margin, loyalty cohorts, online capacity, competitor density, and price-index detail.
 
+## Slide 6 - Appendix: supporting analysis files
+
+**Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility.
+
+- Point to `supporting_analysis.md` for assumptions, key outputs, the regional scorecard, and numeric SQL answers.
+- Point to `metric_summary.csv` for the KPI table by division, banner, region, and industry market.
+- Point to `sql_task_answers.sql` for the five requested SQL queries and the workbook-derived outputs.
+- Mention that `super_market_strategy_analytics_case.xlsx` is the source data and `build_loblaw_case_outputs.py` regenerates all outputs.
+- Use this slide only if asked for detail during Q&A; do not spend much time on it in the main presentation.
+
+## Slide 7 - Thank you
+
+**Core message:** Close with a clear invitation for discussion and next-step prioritization.
+
+- Thank the audience and invite questions.
+- Offer three prompts if Q&A needs structure: Ontario diagnostic priority, most urgent e-commerce constraint, and highest-value incremental data cut.
+- Reinforce that the recommendations are directional and should be validated with margin, store-count, price-index, and customer-level data.
+
 ## Suggested 15-minute flow
 
-- Slide 1: 3 minutes - headline, problem framing, recommendation.
-- Slide 2: 4 minutes - KPI diagnosis and why "more promo" is not the only answer.
-- Slide 3: 4 minutes - regional and banner prioritization.
-- Slide 4: 3 minutes - actions, KPIs, and next analysis.
-- Buffer: 1 minute - assumptions and transition to Q&A.
+- Slide 1: 1 minute - title, context, and agenda.
+- Slide 2: 3 minutes - headline, problem framing, recommendation.
+- Slide 3: 3 minutes - KPI diagnosis and why "more promo" is not the only answer.
+- Slide 4: 3 minutes - regional and banner prioritization.
+- Slide 5: 3 minutes - actions, KPIs, and next analysis.
+- Slides 6-7: 1 minute - appendix pointer and thank-you/Q&A transition.
+- Buffer: 1 minute - assumptions and Q&A setup.

@@ -616,6 +616,31 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       width: 7px;
       background: var(--red);
     }}
+    .title-slide {{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 610px;
+    }}
+    .title-slide h1 {{
+      max-width: 820px;
+      font-size: 44px;
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }}
+    .eyebrow {{
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }}
+    .title-meta {{
+      margin-top: 38px;
+      color: var(--muted);
+      font-size: 18px;
+    }}
     h1 {{
       margin: 0 0 8px;
       font-size: 32px;
@@ -724,6 +749,39 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     .action.red {{ border-top-color: var(--red); }}
     .action.yellow {{ border-top-color: #d87621; }}
     .action.green {{ border-top-color: var(--good); }}
+    .appendix-grid {{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      margin-top: 18px;
+    }}
+    .file-list {{
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      padding: 18px 20px;
+    }}
+    .file-list code {{
+      color: var(--blue);
+      font-weight: 700;
+    }}
+    .thanks {{
+      display: flex;
+      min-height: 610px;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }}
+    .thanks h1 {{
+      color: var(--blue);
+      font-size: 58px;
+    }}
+    .thanks p {{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+      font-size: 22px;
+      color: var(--muted);
+    }}
     .source {{
       position: absolute;
       left: 76px;
@@ -737,6 +795,18 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 <body>
 <main>
   <p class="note">HTML preview of <code>loblaw_discount_division_case_presentation.pdf</code>. Open this file in a browser if the PDF does not render locally.</p>
+
+  <section class="slide title-slide">
+    <div class="eyebrow">Strategy & Analytics Case</div>
+    <h1>Loblaw Discount Division 2020 Performance Review</h1>
+    <p class="subtitle">A 15-minute discussion on performance, priority opportunities, and immediate actions.</p>
+    <div class="title-meta">
+      Prepared for: Strategy Manager discussion<br>
+      Context: Discount Division prior to Hard Discount<br>
+      Date: June 2026
+    </div>
+    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
+  </section>
 
   <section class="slide">
     <h1>Discount Division 2020: growth masked share loss</h1>
@@ -825,6 +895,39 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     <div class="callout">Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.</div>
     <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
+
+  <section class="slide">
+    <h1>Appendix: supporting analysis files</h1>
+    <p class="subtitle">Use these files to validate the story, answer SQL questions, and reproduce the deck.</p>
+    <div class="appendix-grid">
+      <div>
+        <h2>What to review</h2>
+        <div class="file-list">
+          <p><code>supporting_analysis.md</code><br>Assumptions, key outputs, regional scorecard, and SQL numeric answers.</p>
+          <p><code>metric_summary.csv</code><br>Machine-readable KPI summary by division, banner, region, and industry market.</p>
+          <p><code>sql_task_answers.sql</code><br>SQL logic for the five case questions, with workbook-derived numeric results.</p>
+          <p><code>super_market_strategy_analytics_case.xlsx</code><br>Downloaded source workbook used for all calculations.</p>
+          <p><code>build_loblaw_case_outputs.py</code><br>Reproducible standard-library generator for the PDF, HTML, notes, and appendices.</p>
+        </div>
+      </div>
+      <div>
+        <h2>Analysis highlights</h2>
+        <ul>
+          <li>Division row used to avoid double-counting banner rows.</li>
+          <li>Regional share maps banners to closest industry markets.</li>
+          <li>Third-week SQL logic follows the month embedded in the week-ending label.</li>
+          <li>Recommendations are directional because the case data is fictitious and excludes margin, store count, and customer-level detail.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
+  </section>
+
+  <section class="slide thanks">
+    <h1>Thank you</h1>
+    <p>Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?</p>
+    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
+  </section>
 </main>
 </body>
 </html>
@@ -840,9 +943,17 @@ def write_talking_points(metrics: Dict[str, object]) -> None:
     banners = metrics["banners"]
     content = f"""# Slide talking points - Loblaw Discount Division case
 
-Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A and avoids over-explaining the supporting SQL appendix.
+Use this as a 15-minute speaker guide. The title, appendix, and thank-you pages are brief framing/transition slides; the core strategy discussion remains the four analysis slides.
 
-## Slide 1 - Discount Division 2020: growth masked share loss
+## Slide 1 - Title page
+
+**Core message:** Set context quickly: this is a focused Discount Division performance review, not a full enterprise strategy.
+
+- Introduce the case scope: Discount Division performance in 2020, prior to Hard Discount.
+- Preview the structure: headline performance, KPI diagnosis, regional focus, immediate actions, and appendix.
+- Transition: "I will start with the executive takeaway and then show the analysis that supports it."
+
+## Slide 2 - Discount Division 2020: growth masked share loss
 
 **Core message:** The business grew in absolute dollars, but underperformed the broader market, so the strategic question is share recovery rather than demand creation.
 
@@ -852,7 +963,7 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Frame the recommendation: recover share in Ontario/RCSS, scale e-commerce, and maintain value credibility.
 - Transition: "To understand where to act, I first looked at whether the gap was broad-based or concentrated."
 
-## Slide 2 - Scorecard: growth was strong, relative capture weaker
+## Slide 3 - Scorecard: growth was strong, relative capture weaker
 
 **Core message:** The division's main issue was weaker relative capture of a growing market, not weak category demand.
 
@@ -863,7 +974,7 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Mention that every discount market peaked in e-commerce sales during WE Mar 14 20, suggesting a stress point around capacity and fulfillment.
 - Transition: "The national average hides a clear regional priority."
 
-## Slide 3 - Focus areas: Ontario/RCSS priority; Atlantic playbook
+## Slide 4 - Focus areas: Ontario/RCSS priority; Atlantic playbook
 
 **Core message:** Ontario is the largest immediate problem, while Atlantic is a small-base success case worth learning from.
 
@@ -874,7 +985,7 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Balance the story with Atlantic: No Frills Atlantic grew {pct(banners['NO FRILLS ATLANTIC']['sales_growth'])} and gained share, so it can provide execution lessons.
 - Transition: "Based on this, I would organize action into four immediate workstreams."
 
-## Slide 4 - Immediate actions and KPIs
+## Slide 5 - Immediate actions and KPIs
 
 **Core message:** The response should combine targeted share recovery, e-commerce execution, value discipline, and scaling proven local playbooks.
 
@@ -885,13 +996,33 @@ Use this as a 15-minute speaker guide. The suggested pacing leaves time for Q&A 
 - Emphasize KPIs: weekly regional share, RCSS Ontario sales/traffic/basket, e-commerce penetration gap, fulfillment rate, price index, promo ROI, and margin mix.
 - Close with data needs: store-count normalization, margin, loyalty cohorts, online capacity, competitor density, and price-index detail.
 
+## Slide 6 - Appendix: supporting analysis files
+
+**Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility.
+
+- Point to `supporting_analysis.md` for assumptions, key outputs, the regional scorecard, and numeric SQL answers.
+- Point to `metric_summary.csv` for the KPI table by division, banner, region, and industry market.
+- Point to `sql_task_answers.sql` for the five requested SQL queries and the workbook-derived outputs.
+- Mention that `super_market_strategy_analytics_case.xlsx` is the source data and `build_loblaw_case_outputs.py` regenerates all outputs.
+- Use this slide only if asked for detail during Q&A; do not spend much time on it in the main presentation.
+
+## Slide 7 - Thank you
+
+**Core message:** Close with a clear invitation for discussion and next-step prioritization.
+
+- Thank the audience and invite questions.
+- Offer three prompts if Q&A needs structure: Ontario diagnostic priority, most urgent e-commerce constraint, and highest-value incremental data cut.
+- Reinforce that the recommendations are directional and should be validated with margin, store-count, price-index, and customer-level data.
+
 ## Suggested 15-minute flow
 
-- Slide 1: 3 minutes - headline, problem framing, recommendation.
-- Slide 2: 4 minutes - KPI diagnosis and why "more promo" is not the only answer.
-- Slide 3: 4 minutes - regional and banner prioritization.
-- Slide 4: 3 minutes - actions, KPIs, and next analysis.
-- Buffer: 1 minute - assumptions and transition to Q&A.
+- Slide 1: 1 minute - title, context, and agenda.
+- Slide 2: 3 minutes - headline, problem framing, recommendation.
+- Slide 3: 3 minutes - KPI diagnosis and why "more promo" is not the only answer.
+- Slide 4: 3 minutes - regional and banner prioritization.
+- Slide 5: 3 minutes - actions, KPIs, and next analysis.
+- Slides 6-7: 1 minute - appendix pointer and thank-you/Q&A transition.
+- Buffer: 1 minute - assumptions and Q&A setup.
 """
     with open(TALKING_POINTS_PATH, "w") as handle:
         handle.write(content)
@@ -1013,9 +1144,9 @@ class PdfDocument:
             output.extend(b"\nendobj\n")
         xref_start = len(output)
         output.extend(f"xref\n0 {max_obj + 1}\n".encode("latin-1"))
-        output.extend(b"0000000000 65535 f \n")
+        output.extend(b"0000000000 65535 f\n")
         for obj_num in range(1, max_obj + 1):
-            output.extend(f"{offsets[obj_num]:010d} 00000 n \n".encode("latin-1"))
+            output.extend(f"{offsets[obj_num]:010d} 00000 n\n".encode("latin-1"))
         output.extend(
             f"trailer\n<< /Size {max_obj + 1} /Root 1 0 R >>\nstartxref\n{xref_start}\n%%EOF\n".encode(
                 "latin-1"
@@ -1073,7 +1204,41 @@ def write_pdf(metrics: Dict[str, object]) -> None:
 
     doc = PdfDocument()
 
-    # Slide 1
+    # Title page
+    page = PdfPage()
+    page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
+    page.rect(0, 0, 112, page.height, fill=BLUE)
+    page.rect(112, 0, 12, page.height, fill=RED)
+    page.rect(162, 102, 690, 2, fill=YELLOW)
+    page.text(162, 130, "STRATEGY & ANALYTICS CASE", size=13, bold=True, color=BLUE)
+    page.wrapped_text(
+        162,
+        170,
+        "Loblaw Discount Division 2020 Performance Review",
+        710,
+        size=36,
+        bold=True,
+        color=DARK,
+        leading=42,
+    )
+    page.wrapped_text(
+        162,
+        278,
+        "A 15-minute discussion on performance, priority opportunities, and immediate actions.",
+        650,
+        size=18,
+        color=GREY,
+        leading=24,
+    )
+    page.rect(162, 360, 430, 104, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+    page.text(184, 382, "Prepared for", size=11, bold=True, color=GREY)
+    page.text(184, 406, "Strategy Manager discussion", size=16, bold=True, color=DARK)
+    page.text(184, 432, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
+    page.text(184, 452, "Date: June 2026", size=11, color=GREY)
+    page.text(162, 506, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
+    doc.add_page(page)
+
+    # Strategy slide 1
     page = slide_base(
         "Discount Division 2020: growth masked share loss",
         "Recommended discussion: use 2020 momentum to defend value while closing regional and e-commerce gaps.",
@@ -1136,7 +1301,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     )
     doc.add_page(page)
 
-    # Slide 2
+    # Strategy slide 2
     page = slide_base(
         "Scorecard: growth was strong, relative capture weaker",
         "Core issue is not demand generation; it is relative capture of a growing market.",
@@ -1178,7 +1343,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     )
     doc.add_page(page)
 
-    # Slide 3
+    # Strategy slide 3
     page = slide_base(
         "Focus areas: Ontario/RCSS priority; Atlantic playbook",
         "Regional lens shows the largest value pool also contains the clearest share leak.",
@@ -1218,7 +1383,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.text(524, 470, "Treat e-commerce as a share lever, not only a channel KPI.", size=11, color=DARK)
     doc.add_page(page)
 
-    # Slide 4
+    # Strategy slide 4
     page = slide_base(
         "Immediate actions and KPIs",
         "Breadth-first opportunity set for the leadership team; validate with store, customer, and margin detail.",
@@ -1270,6 +1435,60 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         page.bullet_list(x + 14, 194, bullets, 168, size=10, bullet_color=color)
     page.rect(58, 462, 844, 28, fill=(255, 246, 232), stroke=(242, 201, 146), stroke_width=0.8)
     page.text(75, 472, "Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.", size=11, bold=True, color=DARK)
+    doc.add_page(page)
+
+    # Appendix
+    page = slide_base(
+        "Appendix: supporting analysis files",
+        "Use these files to validate the story, answer SQL questions, and reproduce the deck.",
+    )
+    page.rect(50, 106, 860, 32, fill=BLUE)
+    page.text(58, 116, "Supporting file", size=12, bold=True, color=(255, 255, 255))
+    page.text(382, 116, "What it highlights", size=12, bold=True, color=(255, 255, 255))
+    appendix_rows = [
+        ("supporting_analysis.md", "Assumptions, key outputs, regional scorecard, and SQL numeric answers."),
+        ("metric_summary.csv", "KPI summary by division, banner, region, and industry market."),
+        ("sql_task_answers.sql", "SQL logic for the five case questions and workbook-derived outputs."),
+        ("super_market_strategy_analytics_case.xlsx", "Downloaded source workbook used for all calculations."),
+        ("build_loblaw_case_outputs.py", "Reproducible generator for the PDF, HTML, notes, and appendices."),
+    ]
+    row_y = 154
+    for idx, (file_name, description) in enumerate(appendix_rows):
+        page.rect(50, row_y - 10, 860, 48, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
+        page.text(62, row_y, file_name, size=11, bold=True, color=BLUE)
+        page.wrapped_text(382, row_y - 1, description, 490, size=11, color=DARK, leading=14)
+        row_y += 58
+    page.text(58, 465, "Analysis notes", size=14, bold=True, color=DARK)
+    page.bullet_list(
+        76,
+        488,
+        [
+            "Division row used to avoid double-counting banner rows.",
+            "Recommendations are directional because margin, store-count, price-index, and customer-level data are not included.",
+        ],
+        width=790,
+        size=10,
+    )
+    doc.add_page(page)
+
+    # Thank-you page
+    page = PdfPage()
+    page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
+    page.rect(0, 0, 20, page.height, fill=BLUE)
+    page.rect(20, 0, 8, page.height, fill=RED)
+    page.rect(138, 124, 684, 2, fill=YELLOW)
+    page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
+    page.wrapped_text(
+        192,
+        260,
+        "Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?",
+        600,
+        size=17,
+        color=DARK,
+        leading=25,
+    )
+    page.text(338, 420, "Questions & discussion", size=18, bold=True, color=RED)
+    page.text(45, 510, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     doc.add_page(page)
 
     doc.save(PDF_PATH)

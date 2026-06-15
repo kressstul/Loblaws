@@ -4,7 +4,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -16,6 +16,45 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
+<< /Length 1217 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 960.00 540.00 re f
+0.000 0.282 0.569 rg
+0.00 0.00 112.00 540.00 re f
+0.855 0.161 0.110 rg
+112.00 0.00 12.00 540.00 re f
+1.000 0.824 0.000 rg
+162.00 436.00 690.00 2.00 re f
+0.000 0.282 0.569 rg
+BT /F2 13 Tf 162.00 397.00 Td (STRATEGY & ANALYTICS CASE) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 36 Tf 162.00 334.00 Td (Loblaw Discount Division 2020) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 36 Tf 162.00 292.00 Td (Performance Review) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 18 Tf 162.00 244.00 Td (A 15-minute discussion on performance, priority opportunities, and) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 18 Tf 162.00 220.00 Td (immediate actions.) Tj ET
+0.973 0.980 0.988 rg
+0.784 0.808 0.835 RG 0.80 w
+162.00 76.00 430.00 104.00 re B
+0.404 0.439 0.486 rg
+BT /F2 11 Tf 184.00 147.00 Td (Prepared for) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 16 Tf 184.00 118.00 Td (Strategy Manager discussion) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 11 Tf 184.00 97.00 Td (Context: Discount Division prior to Hard Discount) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 11 Tf 184.00 77.00 Td (Date: June 2026) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 8 Tf 162.00 26.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
 << /Length 3045 >>
 stream
 1.000 1.000 1.000 rg
@@ -90,10 +129,10 @@ BT /F2 13 Tf 75.00 88.08 Td (-) Tj ET
 BT /F1 13 Tf 93.00 88.08 Td (No Frills Atlantic is a small-base success case and should be mined for transferable execution lessons.) Tj ET
 endstream
 endobj
-7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
 endobj
-8 0 obj
+10 0 obj
 << /Length 3445 >>
 stream
 1.000 1.000 1.000 rg
@@ -187,10 +226,10 @@ BT /F1 12 Tf 96.00 59.56 Td (E-commerce penetration is already material at 4.6%;
 BT /F1 12 Tf 96.00 44.20 Td (capture.) Tj ET
 endstream
 endobj
-9 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
 endobj
-10 0 obj
+12 0 obj
 << /Length 4003 >>
 stream
 1.000 1.000 1.000 rg
@@ -307,10 +346,10 @@ BT /F1 11 Tf 524.00 79.00 Td (Division penetration: 4.6%; industry: 5.0%.) Tj ET
 BT /F1 11 Tf 524.00 59.00 Td (Treat e-commerce as a share lever, not only a channel KPI.) Tj ET
 endstream
 endobj
-11 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
 endobj
-12 0 obj
+14 0 obj
 << /Length 6169 >>
 stream
 1.000 1.000 1.000 rg
@@ -480,23 +519,130 @@ BT /F1 10 Tf 762.00 198.00 Td (execution scorecards.) Tj ET
 BT /F2 11 Tf 75.00 57.00 Td (Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.) Tj ET
 endstream
 endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 2700 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 960.00 540.00 re f
+0.000 0.282 0.569 rg
+0.00 0.00 14.00 540.00 re f
+0.855 0.161 0.110 rg
+14.00 0.00 6.00 540.00 re f
+0.137 0.153 0.173 rg
+BT /F2 26 Tf 45.00 490.00 Td (Appendix: supporting analysis files) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 12 Tf 46.00 470.00 Td (Use these files to validate the story, answer SQL questions, and reproduce the deck.) Tj ET
+0.784 0.808 0.835 RG 0.70 w
+45.00 456.00 m 915.00 456.00 l S
+0.404 0.439 0.486 rg
+BT /F1 8 Tf 45.00 22.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
+0.000 0.282 0.569 rg
+50.00 402.00 860.00 32.00 re f
+1.000 1.000 1.000 rg
+BT /F2 12 Tf 58.00 412.00 Td (Supporting file) Tj ET
+1.000 1.000 1.000 rg
+BT /F2 12 Tf 382.00 412.00 Td (What it highlights) Tj ET
+0.980 0.984 0.992 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 348.00 860.00 48.00 re B
+0.000 0.282 0.569 rg
+BT /F2 11 Tf 62.00 375.00 Td (supporting_analysis.md) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and SQL numeric answers.) Tj ET
+1.000 1.000 1.000 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 290.00 860.00 48.00 re B
+0.000 0.282 0.569 rg
+BT /F2 11 Tf 62.00 317.00 Td (metric_summary.csv) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 318.00 Td (KPI summary by division, banner, region, and industry market.) Tj ET
+0.980 0.984 0.992 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 232.00 860.00 48.00 re B
+0.000 0.282 0.569 rg
+BT /F2 11 Tf 62.00 259.00 Td (sql_task_answers.sql) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 260.00 Td (SQL logic for the five case questions and workbook-derived outputs.) Tj ET
+1.000 1.000 1.000 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 174.00 860.00 48.00 re B
+0.000 0.282 0.569 rg
+BT /F2 11 Tf 62.00 201.00 Td (super_market_strategy_analytics_case.xlsx) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 202.00 Td (Downloaded source workbook used for all calculations.) Tj ET
+0.980 0.984 0.992 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 116.00 860.00 48.00 re B
+0.000 0.282 0.569 rg
+BT /F2 11 Tf 62.00 143.00 Td (build_loblaw_case_outputs.py) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 144.00 Td (Reproducible generator for the PDF, HTML, notes, and appendices.) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 14 Tf 58.00 61.00 Td (Analysis notes) Tj ET
+0.855 0.161 0.110 rg
+BT /F2 10 Tf 76.00 42.00 Td (-) Tj ET
+0.118 0.118 0.118 rg
+BT /F1 10 Tf 94.00 42.00 Td (Division row used to avoid double-counting banner rows.) Tj ET
+0.855 0.161 0.110 rg
+BT /F2 10 Tf 76.00 24.20 Td (-) Tj ET
+0.118 0.118 0.118 rg
+BT /F1 10 Tf 94.00 24.20 Td (Recommendations are directional because margin, store-count, price-index, and customer-level data are not included.) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
+endobj
+18 0 obj
+<< /Length 838 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 960.00 540.00 re f
+0.000 0.282 0.569 rg
+0.00 0.00 20.00 540.00 re f
+0.855 0.161 0.110 rg
+20.00 0.00 8.00 540.00 re f
+1.000 0.824 0.000 rg
+138.00 414.00 684.00 2.00 re f
+0.000 0.282 0.569 rg
+BT /F2 52 Tf 328.00 312.00 Td (Thank you) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 17 Tf 192.00 263.00 Td (Discussion prompts: Which Ontario diagnostic should we prioritize) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 17 Tf 192.00 238.00 Td (first? What e-commerce constraint is most urgent? What additional) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 17 Tf 192.00 213.00 Td (data would most change the recommendation?) Tj ET
+0.855 0.161 0.110 rg
+BT /F2 18 Tf 338.00 102.00 Td (Questions & discussion) Tj ET
+0.404 0.439 0.486 rg
+BT /F1 8 Tf 45.00 22.00 Td (Source: Super Market Strategy & Analytics Case workbook; fictitious case data.) Tj ET
+endstream
+endobj
 xref
-0 13
-0000000000 65535 f 
-0000000015 00000 n 
-0000000064 00000 n 
-0000000140 00000 n 
-0000000210 00000 n 
-0000000285 00000 n 
-0000000421 00000 n 
-0000003517 00000 n 
-0000003653 00000 n 
-0000007149 00000 n 
-0000007286 00000 n 
-0000011341 00000 n 
-0000011479 00000 n 
+0 19
+0000000000 65535 f
+0000000015 00000 n
+0000000064 00000 n
+0000000161 00000 n
+0000000231 00000 n
+0000000306 00000 n
+0000000442 00000 n
+0000001710 00000 n
+0000001846 00000 n
+0000004942 00000 n
+0000005079 00000 n
+0000008576 00000 n
+0000008714 00000 n
+0000012769 00000 n
+0000012907 00000 n
+0000019128 00000 n
+0000019266 00000 n
+0000022018 00000 n
+0000022156 00000 n
 trailer
-<< /Size 13 /Root 1 0 R >>
+<< /Size 19 /Root 1 0 R >>
 startxref
-17700
+23045
 %%EOF
