@@ -1448,12 +1448,12 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         color=DARK,
         leading=42,
     )
-    page.rect(162, 352, 430, 124, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
-    page.text(184, 382, "Prepared for", size=11, bold=True, color=GREY)
-    page.text(184, 406, "Strategy Manager discussion", size=16, bold=True, color=DARK)
-    page.text(184, 432, "Presented by: Krystal Ng", size=11, color=GREY)
-    page.text(184, 452, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
-    page.text(184, 472, "Date: June 2026", size=11, color=GREY)
+    page.rect(162, 336, 430, 148, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+    page.text(184, 362, "Prepared for", size=11, bold=True, color=GREY)
+    page.text(184, 386, "Strategy Manager discussion", size=16, bold=True, color=DARK)
+    page.text(184, 418, "Presented by: Krystal Ng", size=11, color=GREY)
+    page.text(184, 442, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
+    page.text(184, 466, "Date: June 2026", size=11, color=GREY)
     doc.add_page(page)
 
     # Agenda
@@ -1509,15 +1509,16 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         f"E-commerce sales rose {pct(division['ecom_growth'], 0)}, but penetration trails industry by {(industry['ecom_pen_2020'] - division['ecom_pen_2020']) * 100:.1f} pts.",
         BLUE,
     )
-    page.rect(58, 258, 844, 52, fill=(255, 246, 232), stroke=(242, 201, 146), stroke_width=0.8)
+    page.rect(58, 248, 844, 72, fill=(255, 246, 232), stroke=(242, 201, 146), stroke_width=0.8)
     page.wrapped_text(
         78,
-        275,
+        266,
         "Recommendation: prioritize a share recovery program in Ontario/RCSS while scaling e-commerce capacity and preserving value-price credibility.",
         805,
-        size=16,
+        size=14,
         bold=True,
         color=DARK,
+        leading=18,
     )
     page.text(58, 342, "What management should take away", size=17, bold=True, color=DARK)
     page.bullet_list(
