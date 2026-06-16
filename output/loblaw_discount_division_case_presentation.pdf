@@ -654,10 +654,10 @@ BT /F2 10 Tf 75.00 45.00 Td (Full SQL query logic and complete monthly third-wee
 endstream
 endobj
 21 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 22 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 22 0 R /Annots [23 0 R 24 0 R 25 0 R 26 0 R 27 0 R] >>
 endobj
 22 0 obj
-<< /Length 2422 >>
+<< /Length 2727 >>
 stream
 1.000 1.000 1.000 rg
 0.00 0.00 960.00 540.00 re f
@@ -680,6 +680,8 @@ BT /F2 12 Tf 382.00 412.00 Td (What it highlights) Tj ET
 50.00 348.00 860.00 48.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 375.00 Td (supporting_analysis.md) Tj ET
+0.000 0.282 0.569 RG 0.50 w
+62.00 371.00 m 330.00 371.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and SQL numeric answers.) Tj ET
 1.000 1.000 1.000 rg
@@ -687,6 +689,8 @@ BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and
 50.00 290.00 860.00 48.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 317.00 Td (metric_summary.csv) Tj ET
+0.000 0.282 0.569 RG 0.50 w
+62.00 313.00 m 330.00 313.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 318.00 Td (KPI summary by division, banner, region, and industry market.) Tj ET
 0.980 0.984 0.992 rg
@@ -694,6 +698,8 @@ BT /F1 11 Tf 382.00 318.00 Td (KPI summary by division, banner, region, and indu
 50.00 232.00 860.00 48.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 259.00 Td (sql_task_answers.sql) Tj ET
+0.000 0.282 0.569 RG 0.50 w
+62.00 255.00 m 330.00 255.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 260.00 Td (SQL logic for the five case questions and workbook-derived outputs.) Tj ET
 1.000 1.000 1.000 rg
@@ -701,6 +707,8 @@ BT /F1 11 Tf 382.00 260.00 Td (SQL logic for the five case questions and workboo
 50.00 174.00 860.00 48.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 201.00 Td (super_market_strategy_analytics_case.xlsx) Tj ET
+0.000 0.282 0.569 RG 0.50 w
+62.00 197.00 m 330.00 197.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 202.00 Td (Downloaded source workbook used for all calculations.) Tj ET
 0.980 0.984 0.992 rg
@@ -708,6 +716,8 @@ BT /F1 11 Tf 382.00 202.00 Td (Downloaded source workbook used for all calculati
 50.00 116.00 860.00 48.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 143.00 Td (build_loblaw_case_outputs.py) Tj ET
+0.000 0.282 0.569 RG 0.50 w
+62.00 139.00 m 330.00 139.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 144.00 Td (Reproducible generator for the PDF, HTML, notes, and appendices.) Tj ET
 0.137 0.153 0.173 rg
@@ -722,8 +732,23 @@ BT /F2 10 Tf 76.00 24.20 Td (-) Tj ET
 BT /F1 10 Tf 94.00 24.20 Td (Recommendations are directional because margin, store-count, price-index, and customer-level data are not included.) Tj ET
 endstream
 endobj
+23 0 obj
+<< /Type /Annot /Subtype /Link /Rect [58.00 370.00 343.00 389.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/supporting_analysis.md) >> >>
+endobj
+24 0 obj
+<< /Type /Annot /Subtype /Link /Rect [58.00 312.00 343.00 331.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/metric_summary.csv) >> >>
+endobj
+25 0 obj
+<< /Type /Annot /Subtype /Link /Rect [58.00 254.00 343.00 273.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/sql_task_answers.sql) >> >>
+endobj
+26 0 obj
+<< /Type /Annot /Subtype /Link /Rect [58.00 196.00 343.00 215.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/source_data/super_market_strategy_analytics_case.xlsx) >> >>
+endobj
+27 0 obj
+<< /Type /Annot /Subtype /Link /Rect [58.00 138.00 343.00 157.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/scripts/build_loblaw_case_outputs.py) >> >>
+endobj
 xref
-0 23
+0 28
 0000000000 65535 f
 0000000015 00000 n
 0000000064 00000 n
@@ -746,9 +771,14 @@ xref
 0000020663 00000 n
 0000020801 00000 n
 0000023129 00000 n
-0000023267 00000 n
+0000023312 00000 n
+0000026091 00000 n
+0000026326 00000 n
+0000026557 00000 n
+0000026790 00000 n
+0000027049 00000 n
 trailer
-<< /Size 23 /Root 1 0 R >>
+<< /Size 28 /Root 1 0 R >>
 startxref
-25741
+27291
 %%EOF

@@ -33,6 +33,21 @@ ANALYSIS_PATH = os.path.join(OUTPUT_DIR, "supporting_analysis.md")
 SQL_PATH = os.path.join(OUTPUT_DIR, "sql_task_answers.sql")
 HTML_PATH = os.path.join(OUTPUT_DIR, "deck_preview.html")
 TALKING_POINTS_PATH = os.path.join(OUTPUT_DIR, "slide_talking_points.md")
+GITHUB_BLOB_BASE_URL = (
+    "https://github.com/kressstul/Loblaws/blob/"
+    "cursor/loblaw-discount-case-deck-926f"
+)
+APPENDIX_FILE_LINKS = {
+    "supporting_analysis.md": f"{GITHUB_BLOB_BASE_URL}/output/supporting_analysis.md",
+    "metric_summary.csv": f"{GITHUB_BLOB_BASE_URL}/output/metric_summary.csv",
+    "sql_task_answers.sql": f"{GITHUB_BLOB_BASE_URL}/output/sql_task_answers.sql",
+    "super_market_strategy_analytics_case.xlsx": (
+        f"{GITHUB_BLOB_BASE_URL}/source_data/super_market_strategy_analytics_case.xlsx"
+    ),
+    "build_loblaw_case_outputs.py": (
+        f"{GITHUB_BLOB_BASE_URL}/scripts/build_loblaw_case_outputs.py"
+    ),
+}
 
 XLSX_NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 XLSX_REL = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
@@ -774,6 +789,10 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       color: var(--blue);
       font-weight: 700;
     }}
+    .file-list a {{
+      color: var(--blue);
+      text-decoration: underline;
+    }}
     .thanks {{
       display: flex;
       min-height: 610px;
@@ -963,11 +982,11 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       <div>
         <h2>What to review</h2>
         <div class="file-list">
-          <p><code>supporting_analysis.md</code><br>Assumptions, key outputs, regional scorecard, and SQL numeric answers.</p>
-          <p><code>metric_summary.csv</code><br>Machine-readable KPI summary by division, banner, region, and industry market.</p>
-          <p><code>sql_task_answers.sql</code><br>SQL logic for the five case questions, with workbook-derived numeric results.</p>
-          <p><code>super_market_strategy_analytics_case.xlsx</code><br>Downloaded source workbook used for all calculations.</p>
-          <p><code>build_loblaw_case_outputs.py</code><br>Reproducible standard-library generator for the PDF, HTML, notes, and appendices.</p>
+          <p><a href="{esc(APPENDIX_FILE_LINKS['supporting_analysis.md'])}" target="_blank" rel="noopener"><code>supporting_analysis.md</code></a><br>Assumptions, key outputs, regional scorecard, and SQL numeric answers.</p>
+          <p><a href="{esc(APPENDIX_FILE_LINKS['metric_summary.csv'])}" target="_blank" rel="noopener"><code>metric_summary.csv</code></a><br>Machine-readable KPI summary by division, banner, region, and industry market.</p>
+          <p><a href="{esc(APPENDIX_FILE_LINKS['sql_task_answers.sql'])}" target="_blank" rel="noopener"><code>sql_task_answers.sql</code></a><br>SQL logic for the five case questions, with workbook-derived numeric results.</p>
+          <p><a href="{esc(APPENDIX_FILE_LINKS['super_market_strategy_analytics_case.xlsx'])}" target="_blank" rel="noopener"><code>super_market_strategy_analytics_case.xlsx</code></a><br>Downloaded source workbook used for all calculations.</p>
+          <p><a href="{esc(APPENDIX_FILE_LINKS['build_loblaw_case_outputs.py'])}" target="_blank" rel="noopener"><code>build_loblaw_case_outputs.py</code></a><br>Reproducible standard-library generator for the PDF, HTML, notes, and appendices.</p>
         </div>
       </div>
       <div>
@@ -1109,6 +1128,7 @@ class PdfPage:
         self.width = width
         self.height = height
         self.ops: List[str] = []
+        self.links: List[Tuple[float, float, float, float, str]] = []
 
     def rgb(self, r: int, g: int, b: int) -> Tuple[float, float, float]:
         return (r / 255, g / 255, b / 255)
@@ -1169,6 +1189,9 @@ class PdfPage:
             current += 5
         return current
 
+    def link(self, x: float, y: float, w: float, h: float, url: str) -> None:
+        self.links.append((x, self.height - y - h, x + w, self.height - y, url))
+
     def content(self) -> bytes:
         return ("\n".join(self.ops) + "\n").encode("latin-1", errors="replace")
 
@@ -1193,6 +1216,7 @@ class PdfDocument:
         for page in self.pages:
             page_obj = next_obj
             content_obj = next_obj + 1
+            annotation_objects = list(range(next_obj + 2, next_obj + 2 + len(page.links)))
             page_object_numbers.append(page_obj)
             stream = page.content()
             objects[content_obj] = (
@@ -1200,12 +1224,20 @@ class PdfDocument:
                 + stream
                 + b"endstream"
             )
+            for annotation_obj, (x1, y1, x2, y2, url) in zip(annotation_objects, page.links):
+                objects[annotation_obj] = (
+                    f"<< /Type /Annot /Subtype /Link /Rect [{x1:.2f} {y1:.2f} {x2:.2f} {y2:.2f}] "
+                    f"/Border [0 0 0] /A << /S /URI /URI ({escape_pdf(url)}) >> >>"
+                ).encode("latin-1")
+            annotation_ref = ""
+            if annotation_objects:
+                annotation_ref = " /Annots [" + " ".join(f"{obj} 0 R" for obj in annotation_objects) + "]"
             objects[page_obj] = (
                 f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {page.width} {page.height}] "
                 f"/Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> "
-                f"/Contents {content_obj} 0 R >>"
+                f"/Contents {content_obj} 0 R{annotation_ref} >>"
             ).encode("latin-1")
-            next_obj += 2
+            next_obj += 2 + len(page.links)
         kids = " ".join(f"{obj} 0 R" for obj in page_object_numbers)
         objects[2] = f"<< /Type /Pages /Kids [{kids}] /Count {len(page_object_numbers)} >>".encode("latin-1")
         objects[1] = b"<< /Type /Catalog /Pages 2 0 R >>"
@@ -1580,6 +1612,8 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     for idx, (file_name, description) in enumerate(appendix_rows):
         page.rect(50, row_y - 10, 860, 48, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
         page.text(62, row_y, file_name, size=11, bold=True, color=BLUE)
+        page.line(62, row_y + 15, 330, row_y + 15, BLUE, width=0.5)
+        page.link(58, row_y - 3, 285, 19, APPENDIX_FILE_LINKS[file_name])
         page.wrapped_text(382, row_y - 1, description, 490, size=11, color=DARK, leading=14)
         row_y += 58
     page.text(58, 465, "Analysis notes", size=14, bold=True, color=DARK)
