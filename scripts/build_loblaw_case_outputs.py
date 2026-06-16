@@ -650,8 +650,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       margin: 24px 0 12px;
       font-size: 21px;
     }}
-    .subtitle {{
-      color: var(--muted);
+    .title-rule {{
       margin: 0 0 26px;
       padding-bottom: 18px;
       border-bottom: 1px solid var(--line);
@@ -832,7 +831,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
   <section class="slide title-slide">
     <div class="eyebrow">Strategy & Analytics Case</div>
     <h1>Loblaw Discount Division 2020 Performance Review</h1>
-    <p class="subtitle">A 15-minute discussion on performance, priority opportunities, and immediate actions.</p>
+    <div class="title-rule"></div>
     <div class="title-meta">
       Prepared for: Strategy Manager discussion<br>
       Presented by: Krystal Ng<br>
@@ -844,7 +843,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide">
     <h1>Agenda</h1>
-    <p class="subtitle">A focused path from headline performance to recommended action.</p>
+    <div class="title-rule"></div>
     <div class="agenda-list">
       <div class="agenda-item"><div class="agenda-number">1</div><div><h2>Executive takeaway</h2><p>How 2020 growth masked national share loss.</p></div></div>
       <div class="agenda-item"><div class="agenda-number">2</div><div><h2>Performance scorecard</h2><p>Sales, promo, e-commerce, and industry comparison.</p></div></div>
@@ -856,7 +855,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide">
     <h1>Discount Division 2020: growth masked share loss</h1>
-    <p class="subtitle">Recommended discussion: use 2020 momentum to defend value while closing regional and e-commerce gaps.</p>
+    <div class="title-rule"></div>
     <div class="cards">
       <div class="card"><div class="metric">{esc(money_b(division['sales_2020']))}</div><div class="label">2020 sales</div><p>Sales grew {esc(pct(division['sales_growth']))}, but the market grew {esc(pct(industry['sales_growth']))}.</p></div>
       <div class="card"><div class="metric red">{esc(pct(division['share_2020']))}</div><div class="label">national share</div><p>Share declined {esc(pts(division['share_delta']))} versus 2019.</p></div>
@@ -875,7 +874,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide">
     <h1>Scorecard: growth was strong, relative capture weaker</h1>
-    <p class="subtitle">Core issue is not demand generation; it is relative capture of a growing market.</p>
+    <div class="title-rule"></div>
     <div class="two-col">
       <div>
         <h2>Sales growth</h2>
@@ -905,7 +904,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide">
     <h1>Focus areas: Ontario/RCSS priority; Atlantic playbook</h1>
-    <p class="subtitle">Regional lens shows the largest value pool also contains the clearest share leak.</p>
+    <div class="title-rule"></div>
     <table>
       <tr><th>Region</th><th>2020 sales</th><th>YoY</th><th>Share</th><th>Share change</th></tr>
       {''.join(region_rows)}
@@ -931,7 +930,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide">
     <h1>Immediate actions and KPIs</h1>
-    <p class="subtitle">Breadth-first opportunity set for the leadership team; validate with store, customer, and margin detail.</p>
+    <div class="title-rule"></div>
     <div class="actions">
       <div class="action red"><h2>1. Ontario share reset</h2><ul><li>Deep dive RCSS Ontario stores, assortment, price gaps, and out-of-stock drivers.</li><li>Localize value communication and traffic-driving categories where share loss is highest.</li><li>KPI: weekly Ontario share, RCSS Ontario YoY sales, traffic, and basket size.</li></ul></div>
       <div class="action"><h2>2. E-commerce capacity</h2><ul><li>Expand pickup/delivery slot availability around high-demand stores and peak weeks.</li><li>Improve substitution quality and availability on known online baskets.</li><li>KPI: e-com penetration gap to industry, fulfillment rate, repeat online shoppers.</li></ul></div>
@@ -950,7 +949,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide">
     <h1>Appendix: supporting analysis files</h1>
-    <p class="subtitle">Use these files to validate the story, answer SQL questions, and reproduce the deck.</p>
+    <div class="title-rule"></div>
     <div class="appendix-grid">
       <div>
         <h2>What to review</h2>
@@ -1224,15 +1223,13 @@ GREEN = (40, 140, 90)
 ORANGE = (218, 118, 33)
 
 
-def slide_base(title: str, subtitle: str = "") -> PdfPage:
+def slide_base(title: str) -> PdfPage:
     page = PdfPage()
     page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
     page.rect(0, 0, 14, page.height, fill=BLUE)
     page.rect(14, 0, 6, page.height, fill=RED)
     page.text(45, 24, title, size=26, bold=True, color=DARK)
-    if subtitle:
-        page.text(46, 58, subtitle, size=12, color=GREY)
-    page.line(45, 84, 915, 84, MID_GREY, width=0.7)
+    page.line(45, 70, 915, 70, MID_GREY, width=0.7)
     page.text(45, 510, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     return page
 
@@ -1278,15 +1275,6 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         color=DARK,
         leading=42,
     )
-    page.wrapped_text(
-        162,
-        278,
-        "A 15-minute discussion on performance, priority opportunities, and immediate actions.",
-        650,
-        size=18,
-        color=GREY,
-        leading=24,
-    )
     page.rect(162, 352, 430, 124, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
     page.text(184, 382, "Prepared for", size=11, bold=True, color=GREY)
     page.text(184, 406, "Strategy Manager discussion", size=16, bold=True, color=DARK)
@@ -1297,10 +1285,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Agenda
-    page = slide_base(
-        "Agenda",
-        "A focused path from headline performance to recommended action.",
-    )
+    page = slide_base("Agenda")
     agenda_items = [
         ("1", "Executive takeaway", "How 2020 growth masked national share loss."),
         ("2", "Performance scorecard", "Sales, promo, e-commerce, and industry comparison."),
@@ -1318,10 +1303,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Strategy slide 1
-    page = slide_base(
-        "Discount Division 2020: growth masked share loss",
-        "Recommended discussion: use 2020 momentum to defend value while closing regional and e-commerce gaps.",
-    )
+    page = slide_base("Discount Division 2020: growth masked share loss")
     card(
         page,
         58,
@@ -1381,10 +1363,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Strategy slide 2
-    page = slide_base(
-        "Scorecard: growth was strong, relative capture weaker",
-        "Core issue is not demand generation; it is relative capture of a growing market.",
-    )
+    page = slide_base("Scorecard: growth was strong, relative capture weaker")
     page.text(60, 116, "Sales growth", size=16, bold=True, color=DARK)
     draw_bar(page, 70, 154, "Discount Division", division["sales_growth"], 0.12, BLUE)
     draw_bar(page, 70, 198, "Industry", industry["sales_growth"], 0.12, RED)
@@ -1423,10 +1402,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Strategy slide 3
-    page = slide_base(
-        "Focus areas: Ontario/RCSS priority; Atlantic playbook",
-        "Regional lens shows the largest value pool also contains the clearest share leak.",
-    )
+    page = slide_base("Focus areas: Ontario/RCSS priority; Atlantic playbook")
     headers = ["Region", "2020 sales", "YoY", "Share", "Share chg.", "Readout"]
     xs = [60, 175, 290, 390, 492, 620]
     widths = [110, 105, 80, 80, 105, 275]
@@ -1463,10 +1439,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Strategy slide 4
-    page = slide_base(
-        "Immediate actions and KPIs",
-        "Breadth-first opportunity set for the leadership team; validate with store, customer, and margin detail.",
-    )
+    page = slide_base("Immediate actions and KPIs")
     actions = [
         (
             "1. Ontario share reset",
@@ -1537,10 +1510,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Appendix
-    page = slide_base(
-        "Appendix: supporting analysis files",
-        "Use these files to validate the story, answer SQL questions, and reproduce the deck.",
-    )
+    page = slide_base("Appendix: supporting analysis files")
     page.rect(50, 106, 860, 32, fill=BLUE)
     page.text(58, 116, "Supporting file", size=12, bold=True, color=(255, 255, 255))
     page.text(382, 116, "What it highlights", size=12, bold=True, color=(255, 255, 255))
