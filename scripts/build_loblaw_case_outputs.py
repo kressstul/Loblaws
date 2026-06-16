@@ -801,7 +801,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     }}
     .file-list a {{
       color: var(--blue);
-      text-decoration: underline;
+      text-decoration: none;
     }}
     .thanks {{
       display: flex;
@@ -1740,7 +1740,6 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         page.rect(50, row_y - 10, 860, 42, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
         page.text(62, row_y, file_name, size=11, bold=True, color=BLUE)
         link_width = estimate_text_width(file_name, size=11, bold=True)
-        page.line(62, row_y + 15, 62 + link_width, row_y + 15, BLUE, width=0.5)
         page.link(58, row_y - 3, link_width + 12, 19, APPENDIX_FILE_LINKS[file_name])
         page.wrapped_text(382, row_y - 1, description, 490, size=11, color=DARK, leading=14)
         row_y += 50

@@ -597,7 +597,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 22 0 R /Annots [23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R] >>
 endobj
 22 0 obj
-<< /Length 3080 >>
+<< /Length 2714 >>
 stream
 1.000 1.000 1.000 rg
 0.00 0.00 960.00 540.00 re f
@@ -620,8 +620,6 @@ BT /F2 12 Tf 382.00 412.00 Td (What it highlights) Tj ET
 50.00 354.00 860.00 42.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 375.00 Td (supporting_analysis.md) Tj ET
-0.000 0.282 0.569 RG 0.50 w
-62.00 371.00 m 202.36 371.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and SQL numeric answers.) Tj ET
 1.000 1.000 1.000 rg
@@ -629,8 +627,6 @@ BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and
 50.00 304.00 860.00 42.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 325.00 Td (metric_summary.csv) Tj ET
-0.000 0.282 0.569 RG 0.50 w
-62.00 321.00 m 176.84 321.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 326.00 Td (KPI summary by division, banner, region, and industry market.) Tj ET
 0.980 0.984 0.992 rg
@@ -638,8 +634,6 @@ BT /F1 11 Tf 382.00 326.00 Td (KPI summary by division, banner, region, and indu
 50.00 254.00 860.00 42.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 275.00 Td (sql_task_answers.sql) Tj ET
-0.000 0.282 0.569 RG 0.50 w
-62.00 271.00 m 189.60 271.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 276.00 Td (SQL logic for the five case questions and workbook-derived outputs.) Tj ET
 1.000 1.000 1.000 rg
@@ -647,8 +641,6 @@ BT /F1 11 Tf 382.00 276.00 Td (SQL logic for the five case questions and workboo
 50.00 204.00 860.00 42.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 225.00 Td (leadership_presentation_script.md) Tj ET
-0.000 0.282 0.569 RG 0.50 w
-62.00 221.00 m 272.54 221.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 226.00 Td (Polished talk track for presenting each slide to leadership.) Tj ET
 0.980 0.984 0.992 rg
@@ -656,8 +648,6 @@ BT /F1 11 Tf 382.00 226.00 Td (Polished talk track for presenting each slide to 
 50.00 154.00 860.00 42.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 175.00 Td (super_market_strategy_analytics_case.xlsx) Tj ET
-0.000 0.282 0.569 RG 0.50 w
-62.00 171.00 m 323.58 171.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 176.00 Td (Downloaded source workbook used for all calculations.) Tj ET
 1.000 1.000 1.000 rg
@@ -665,8 +655,6 @@ BT /F1 11 Tf 382.00 176.00 Td (Downloaded source workbook used for all calculati
 50.00 104.00 860.00 42.00 re B
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 125.00 Td (build_loblaw_case_outputs.py) Tj ET
-0.000 0.282 0.569 RG 0.50 w
-62.00 121.00 m 240.64 121.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 126.00 Td (Reproducible generator for the PDF, HTML, notes, and appendices.) Tj ET
 0.137 0.153 0.173 rg
@@ -724,14 +712,14 @@ xref
 0000018799 00000 n
 0000021127 00000 n
 0000021317 00000 n
-0000024449 00000 n
-0000024684 00000 n
-0000024915 00000 n
-0000025148 00000 n
-0000025394 00000 n
-0000025653 00000 n
+0000024083 00000 n
+0000024318 00000 n
+0000024549 00000 n
+0000024782 00000 n
+0000025028 00000 n
+0000025287 00000 n
 trailer
 << /Size 29 /Root 1 0 R >>
 startxref
-25895
+25529
 %%EOF
