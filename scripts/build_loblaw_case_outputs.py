@@ -866,7 +866,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     <div class="title-rule"></div>
     <div class="title-meta">
       Presented by: Krystal Ng<br>
-      Context: Discount Division prior to Hard Discount<br>
       Date: June 2026
     </div>
   </section>
@@ -1447,10 +1446,8 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         color=DARK,
         leading=42,
     )
-    page.rect(162, 360, 430, 104, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
-    page.text(184, 380, "Presented by: Krystal Ng", size=12, bold=True, color=DARK)
-    page.text(184, 410, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
-    page.text(184, 434, "Date: June 2026", size=11, color=GREY)
+    page.text(162, 372, "Presented by: Krystal Ng", size=13, bold=True, color=DARK)
+    page.text(162, 402, "Date: June 2026", size=12, color=GREY)
     doc.add_page(page)
 
     # Agenda
