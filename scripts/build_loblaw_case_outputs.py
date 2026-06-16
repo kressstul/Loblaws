@@ -33,6 +33,7 @@ ANALYSIS_PATH = os.path.join(OUTPUT_DIR, "supporting_analysis.md")
 SQL_PATH = os.path.join(OUTPUT_DIR, "sql_task_answers.sql")
 HTML_PATH = os.path.join(OUTPUT_DIR, "deck_preview.html")
 TALKING_POINTS_PATH = os.path.join(OUTPUT_DIR, "slide_talking_points.md")
+LEADERSHIP_SCRIPT_PATH = os.path.join(OUTPUT_DIR, "leadership_presentation_script.md")
 GITHUB_BLOB_BASE_URL = (
     "https://github.com/kressstul/Loblaws/blob/"
     "cursor/loblaw-discount-case-deck-926f"
@@ -41,6 +42,9 @@ APPENDIX_FILE_LINKS = {
     "supporting_analysis.md": f"{GITHUB_BLOB_BASE_URL}/output/supporting_analysis.md",
     "metric_summary.csv": f"{GITHUB_BLOB_BASE_URL}/output/metric_summary.csv",
     "sql_task_answers.sql": f"{GITHUB_BLOB_BASE_URL}/output/sql_task_answers.sql",
+    "leadership_presentation_script.md": (
+        f"{GITHUB_BLOB_BASE_URL}/output/leadership_presentation_script.md"
+    ),
     "super_market_strategy_analytics_case.xlsx": (
         f"{GITHUB_BLOB_BASE_URL}/source_data/super_market_strategy_analytics_case.xlsx"
     ),
@@ -985,6 +989,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
           <p><a href="{esc(APPENDIX_FILE_LINKS['supporting_analysis.md'])}" target="_blank" rel="noopener"><code>supporting_analysis.md</code></a><br>Assumptions, key outputs, regional scorecard, and SQL numeric answers.</p>
           <p><a href="{esc(APPENDIX_FILE_LINKS['metric_summary.csv'])}" target="_blank" rel="noopener"><code>metric_summary.csv</code></a><br>Machine-readable KPI summary by division, banner, region, and industry market.</p>
           <p><a href="{esc(APPENDIX_FILE_LINKS['sql_task_answers.sql'])}" target="_blank" rel="noopener"><code>sql_task_answers.sql</code></a><br>SQL logic for the five case questions, with workbook-derived numeric results.</p>
+          <p><a href="{esc(APPENDIX_FILE_LINKS['leadership_presentation_script.md'])}" target="_blank" rel="noopener"><code>leadership_presentation_script.md</code></a><br>Polished talk track for presenting each slide to leadership.</p>
           <p><a href="{esc(APPENDIX_FILE_LINKS['super_market_strategy_analytics_case.xlsx'])}" target="_blank" rel="noopener"><code>super_market_strategy_analytics_case.xlsx</code></a><br>Downloaded source workbook used for all calculations.</p>
           <p><a href="{esc(APPENDIX_FILE_LINKS['build_loblaw_case_outputs.py'])}" target="_blank" rel="noopener"><code>build_loblaw_case_outputs.py</code></a><br>Reproducible standard-library generator for the PDF, HTML, notes, and appendices.</p>
         </div>
@@ -1120,6 +1125,116 @@ Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-yo
 - Buffer: 1 minute - assumptions and Q&A setup.
 """
     with open(TALKING_POINTS_PATH, "w") as handle:
+        handle.write(content)
+
+
+def write_leadership_script(metrics: Dict[str, object]) -> None:
+    division = metrics["division"]
+    industry = metrics["industry_national"]
+    regions = metrics["regions"]
+    banners = metrics["banners"]
+    sql = metrics["sql"]
+    content = f"""# Leadership presentation script - Loblaw Discount Division case
+
+This script is written as a polished talk track for a 15-minute leadership presentation. Use it as a guide rather than reading it word-for-word.
+
+## Slide 1 - Title page
+
+Good morning / afternoon, and thank you for the opportunity to present.
+
+Today I will walk through a 2020 performance review of the Loblaw Discount Division, using the case data provided. The focus is on what the numbers suggest about divisional performance, where leadership attention should go first, and what immediate actions I would recommend.
+
+I will keep the main story focused, and I have included the SQL task answers and supporting analysis in the appendix for reference.
+
+## Slide 2 - Agenda
+
+I will cover four areas.
+
+First, I will start with the executive takeaway: the division grew in 2020, but the market grew faster, which created a share challenge.
+
+Second, I will walk through the performance scorecard across sales, promo, and e-commerce.
+
+Third, I will identify the priority focus areas, especially Ontario and RCSS.
+
+Finally, I will close with recommended actions and KPIs, then use the appendix for the SQL task and supporting detail.
+
+## Slide 3 - Discount Division 2020: growth masked share loss
+
+The headline is that 2020 was not a demand problem. The Discount Division delivered {money_b(division['sales_2020'])} in sales and grew {pct(division['sales_growth'])} year over year.
+
+However, the broader industry grew {pct(industry['sales_growth'])}, so the division did not keep pace with the market. As a result, national share declined from {pct(division['share_2019'])} to {pct(division['share_2020'])}, a decline of {abs(division['share_delta']) * 100:.1f} pts.
+
+That changes how I would frame the management question. I would not frame this as "how do we create demand?" The market was already growing. I would frame it as "how do we capture our fair share of demand?"
+
+My recommendation is to focus on three areas: first, recover share in Ontario, particularly RCSS Ontario; second, close the e-commerce penetration gap; and third, maintain value credibility without relying only on broad-based promotions.
+
+## Slide 4 - Scorecard: growth was strong, relative capture weaker
+
+This scorecard explains why I believe the issue is relative capture rather than weak demand.
+
+On sales, Discount grew {pct(division['sales_growth'])}, while the industry grew {pct(industry['sales_growth'])}. That gap explains the share decline.
+
+On promotion, Discount promo penetration was {pct(division['promo_pen_2020'])}, essentially in line with the national industry. Promo penetration also came down from {pct(division['promo_pen_2019'])} in 2019. So I would be cautious about making "promote more" the default answer. The data does not suggest that the division was materially under-promoted versus the market.
+
+On e-commerce, the division grew rapidly, with e-commerce sales up {pct(division['ecom_growth'], 0)}. But penetration was {pct(division['ecom_pen_2020'])}, compared with {pct(industry['ecom_pen_2020'])} for the industry. That suggests the division participated in online growth, but may not have captured its full fair share.
+
+The key takeaway for leadership is that the response should be targeted: recover share where the gap is largest, improve e-commerce execution, and use promotions surgically rather than broadly.
+
+## Slide 5 - Focus areas: Ontario/RCSS priority; Atlantic playbook
+
+The regional view shows where I would focus leadership attention first.
+
+Ontario is the clearest priority. The region grew only {pct(regions['Ontario']['sales_growth'])}, and share declined about {pts(regions['Ontario']['share_delta'])}. Within Ontario, the banner-level split is important: No Frills Ontario grew {pct(banners['NO FRILLS ONTARIO']['sales_growth'])}, while RCSS Ontario declined {pct(banners['RCSS ONTARIO']['sales_growth'])}.
+
+That suggests Ontario is not uniformly weak. The issue appears more concentrated in RCSS Ontario, so that is where I would start the diagnostic.
+
+I would look at store-level sales, traffic versus basket, category performance, price perception, out-of-stocks, local competitor intensity, and e-commerce fulfillment constraints.
+
+At the same time, Atlantic is a positive outlier. No Frills Atlantic grew {pct(banners['NO FRILLS ATLANTIC']['sales_growth'])} and gained share. I would treat Atlantic as a playbook to study: what did the team do well, and what can be transferred to other markets?
+
+## Slide 6 - Immediate actions and KPIs
+
+Based on the analysis, I would organize the response into four workstreams.
+
+First, an Ontario share reset. I would start with RCSS Ontario and diagnose whether the issue is traffic, basket, price perception, assortment, availability, or local competitive pressure. The KPIs would be weekly Ontario share, RCSS Ontario sales growth, traffic, basket size, and category-level gaps.
+
+Second, e-commerce capacity and reliability. Since e-commerce penetration trails the industry, I would look at slot availability, substitutions, online out-of-stocks, fulfillment rates, cancellations, and repeat online shoppers. The objective is to make sure we are not losing online baskets because the customer experience cannot keep up with demand.
+
+Third, value and promo discipline. Because promo penetration is already in line with industry, I would not recommend blanket promotional depth as the first move. I would focus on key value items, targeted offers, and margin-aware promotions.
+
+Fourth, scale what works. Atlantic appears to be outperforming, so I would study the operating model, local execution, and competitive context there, then identify which practices can be replicated.
+
+The next data cuts I would request are margin, store count, sales per store, traffic, basket size, loyalty retention, price index, and e-commerce fulfillment metrics.
+
+## Slide 7 - Thank you
+
+Thank you. I will pause here and welcome questions.
+
+If helpful, I can also go into the appendix, which includes the SQL task answers and the supporting analysis behind the recommendation.
+
+## Slide 8 - Appendix: SQL task answers
+
+This slide addresses the SQL task from the case instructions.
+
+For the first question, average weekly sales for Maxi in 2020 were {money_m(sql['maxi_average_weekly_sales_2020'], 1)} per week.
+
+For promo penetration by industry market, the results were: Atlantic 35.5%, National 35.2%, Ontario 33.5%, Quebec 33.1%, and West 35.5%.
+
+For the highest e-commerce week, all discount markets peaked on WE Mar 14 20, with the division total at $30.4M.
+
+For the No Frills Ontario third-week question, the logic is to rank weeks within each month. The example from the prompt is April: WE Apr 18 20, with 2019 sales of $118.8M.
+
+For the No Frills Ontario market share question on WE Jun 27 20, the result is {pct(sql['no_frills_ontario_share_jun27'])}, calculated as {money_m(sql['no_frills_ontario_jun27_sales'], 1)} divided by {money_b(sql['total_ontario_jun27_sales'], 2)}.
+
+## Slide 9 - Appendix: supporting analysis files
+
+This final appendix slide provides the audit trail.
+
+The supporting analysis file documents assumptions, key outputs, and the regional scorecard. The metric summary provides the calculated KPIs in CSV format. The SQL file includes the query logic for each SQL task question. The source workbook is also included, along with the script used to regenerate the PDF, HTML preview, talking points, and appendices.
+
+The main assumption to highlight is that I used the total division row to avoid double-counting banner rows, and I mapped banners to the closest regional industry market for share calculations.
+"""
+    with open(LEADERSHIP_SCRIPT_PATH, "w") as handle:
         handle.write(content)
 
 
@@ -1596,17 +1711,18 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         ("supporting_analysis.md", "Assumptions, key outputs, regional scorecard, and SQL numeric answers."),
         ("metric_summary.csv", "KPI summary by division, banner, region, and industry market."),
         ("sql_task_answers.sql", "SQL logic for the five case questions and workbook-derived outputs."),
+        ("leadership_presentation_script.md", "Polished talk track for presenting each slide to leadership."),
         ("super_market_strategy_analytics_case.xlsx", "Downloaded source workbook used for all calculations."),
         ("build_loblaw_case_outputs.py", "Reproducible generator for the PDF, HTML, notes, and appendices."),
     ]
     row_y = 154
     for idx, (file_name, description) in enumerate(appendix_rows):
-        page.rect(50, row_y - 10, 860, 48, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
+        page.rect(50, row_y - 10, 860, 42, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
         page.text(62, row_y, file_name, size=11, bold=True, color=BLUE)
         page.line(62, row_y + 15, 330, row_y + 15, BLUE, width=0.5)
         page.link(58, row_y - 3, 285, 19, APPENDIX_FILE_LINKS[file_name])
         page.wrapped_text(382, row_y - 1, description, 490, size=11, color=DARK, leading=14)
-        row_y += 58
+        row_y += 50
     page.text(58, 465, "Analysis notes", size=14, bold=True, color=DARK)
     page.bullet_list(
         76,
@@ -1631,6 +1747,7 @@ def build_outputs() -> None:
     write_sql(metrics)
     write_html_preview(metrics)
     write_talking_points(metrics)
+    write_leadership_script(metrics)
     write_pdf(metrics)
 
 
