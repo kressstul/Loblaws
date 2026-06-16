@@ -1284,6 +1284,13 @@ class PdfPage:
         pdf_y = self.height - y - size
         self.ops.append(f"BT {font} {size} Tf {x:.2f} {pdf_y:.2f} Td ({escape_pdf(text)}) Tj ET")
 
+    def centered_text(self, y: float, text: str, size: int = 16, bold: bool = False,
+                      color: Tuple[int, int, int] = (30, 30, 30),
+                      content_x: float = 20, content_width: float = 940) -> None:
+        text_width = estimate_text_width(text, size=size, bold=bold)
+        x = content_x + (content_width - text_width) / 2
+        self.text(x, y, text, size=size, bold=bold, color=color)
+
     def wrapped_text(self, x: float, y: float, text: str, width: float, size: int = 14,
                      bold: bool = False, color: Tuple[int, int, int] = (30, 30, 30),
                      leading: float | None = None) -> float:
@@ -1675,8 +1682,9 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
     page.rect(0, 0, 14, page.height, fill=BLUE)
     page.rect(14, 0, 6, page.height, fill=RED)
-    page.text(333, 190, "Thank you", size=52, bold=True, color=BLUE)
-    page.text(392, 284, "Questions?", size=24, bold=True, color=RED)
+    page.rect(20, 68, 940, 6, fill=(255, 255, 255))
+    page.centered_text(190, "Thank you", size=52, bold=True, color=BLUE)
+    page.centered_text(284, "Questions?", size=24, bold=True, color=RED)
     doc.add_page(page)
 
     # SQL task appendix
