@@ -1448,9 +1448,9 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         leading=42,
     )
     page.rect(162, 360, 430, 104, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
-    page.text(184, 386, "Presented by: Krystal Ng", size=12, bold=True, color=DARK)
-    page.text(184, 416, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
-    page.text(184, 440, "Date: June 2026", size=11, color=GREY)
+    page.text(184, 380, "Presented by: Krystal Ng", size=12, bold=True, color=DARK)
+    page.text(184, 410, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
+    page.text(184, 434, "Date: June 2026", size=11, color=GREY)
     doc.add_page(page)
 
     # Agenda
