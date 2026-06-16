@@ -173,6 +173,12 @@ def money_m(value: float, decimals: int = 0) -> str:
     return f"${value / 1_000_000:.{decimals}f}M"
 
 
+def estimate_text_width(text: str, size: int = 11, bold: bool = False) -> float:
+    """Approximate Helvetica text width for link underlines and hit boxes."""
+    weight = 0.58 if bold else 0.53
+    return min(len(text) * size * weight, 285)
+
+
 def compute_metrics() -> Dict[str, object]:
     sheets = load_workbook_sheet_rows()
     discount = rows_to_records(sheets["Discount Sales by Region Data"])
@@ -1644,15 +1650,15 @@ def write_pdf(metrics: Dict[str, object]) -> None:
             GREEN,
         ),
     ]
-    x_positions = [58, 282, 506, 730]
+    positions = [(58, 116), (506, 116), (58, 284), (506, 284)]
     for idx, (title, bullets, color) in enumerate(actions):
-        x = x_positions[idx]
-        page.rect(x, 116, 196, 330, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
-        page.rect(x, 116, 196, 10, fill=color)
-        page.wrapped_text(x + 14, 144, title, 168, size=15, bold=True, color=DARK)
-        page.bullet_list(x + 14, 194, bullets, 168, size=10, bullet_color=color)
-    page.rect(58, 462, 844, 28, fill=(255, 246, 232), stroke=(242, 201, 146), stroke_width=0.8)
-    page.text(75, 472, "Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.", size=11, bold=True, color=DARK)
+        x, y = positions[idx]
+        page.rect(x, y, 396, 142, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+        page.rect(x, y, 396, 8, fill=color)
+        page.wrapped_text(x + 16, y + 24, title, 360, size=14, bold=True, color=DARK, leading=17)
+        page.bullet_list(x + 16, y + 58, bullets, 360, size=9, bullet_color=color)
+    page.rect(58, 462, 844, 30, fill=(255, 246, 232), stroke=(242, 201, 146), stroke_width=0.8)
+    page.text(75, 473, "Next data cuts: margin, store count, price index, loyalty cohorts, online capacity, and competitor density.", size=11, bold=True, color=DARK)
     doc.add_page(page)
 
     # Thank-you page
@@ -1719,8 +1725,9 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     for idx, (file_name, description) in enumerate(appendix_rows):
         page.rect(50, row_y - 10, 860, 42, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
         page.text(62, row_y, file_name, size=11, bold=True, color=BLUE)
-        page.line(62, row_y + 15, 330, row_y + 15, BLUE, width=0.5)
-        page.link(58, row_y - 3, 285, 19, APPENDIX_FILE_LINKS[file_name])
+        link_width = estimate_text_width(file_name, size=11, bold=True)
+        page.line(62, row_y + 15, 62 + link_width, row_y + 15, BLUE, width=0.5)
+        page.link(58, row_y - 3, link_width + 12, 19, APPENDIX_FILE_LINKS[file_name])
         page.wrapped_text(382, row_y - 1, description, 490, size=11, color=DARK, leading=14)
         row_y += 50
     page.text(58, 465, "Analysis notes", size=14, bold=True, color=DARK)

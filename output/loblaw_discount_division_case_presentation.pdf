@@ -396,7 +396,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
 endobj
 16 0 obj
-<< /Length 5871 >>
+<< /Length 4284 >>
 stream
 1.000 1.000 1.000 rg
 0.00 0.00 960.00 540.00 re f
@@ -410,155 +410,103 @@ BT /F2 26 Tf 45.00 490.00 Td (Immediate actions and KPIs) Tj ET
 45.00 470.00 m 915.00 470.00 l S
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-58.00 94.00 196.00 330.00 re B
+58.00 282.00 396.00 142.00 re B
 0.855 0.161 0.110 rg
-58.00 414.00 196.00 10.00 re f
+58.00 416.00 396.00 8.00 re f
 0.137 0.153 0.173 rg
-BT /F2 15 Tf 72.00 381.00 Td (1. Ontario share) Tj ET
-0.137 0.153 0.173 rg
-BT /F2 15 Tf 72.00 361.80 Td (reset) Tj ET
+BT /F2 14 Tf 74.00 386.00 Td (1. Ontario share reset) Tj ET
 0.855 0.161 0.110 rg
-BT /F2 10 Tf 72.00 336.00 Td (-) Tj ET
+BT /F2 9 Tf 74.00 357.00 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 336.00 Td (Deep dive RCSS Ontario) Tj ET
+BT /F1 9 Tf 92.00 357.00 Td (Deep dive RCSS Ontario stores, assortment, price gaps, and out-of-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 323.20 Td (stores, assortment, price) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 310.40 Td (gaps, and out-of-stock) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 297.60 Td (drivers.) Tj ET
+BT /F1 9 Tf 92.00 345.48 Td (stock drivers.) Tj ET
 0.855 0.161 0.110 rg
-BT /F2 10 Tf 72.00 279.80 Td (-) Tj ET
+BT /F2 9 Tf 74.00 328.96 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 279.80 Td (Localize value) Tj ET
+BT /F1 9 Tf 92.00 328.96 Td (Localize value communication and traffic-driving categories where) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 267.00 Td (communication and traffic-) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 254.20 Td (driving categories where) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 241.40 Td (share loss is highest.) Tj ET
+BT /F1 9 Tf 92.00 317.44 Td (share loss is highest.) Tj ET
 0.855 0.161 0.110 rg
-BT /F2 10 Tf 72.00 223.60 Td (-) Tj ET
+BT /F2 9 Tf 74.00 300.92 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 223.60 Td (KPI: weekly Ontario share,) Tj ET
+BT /F1 9 Tf 92.00 300.92 Td (KPI: weekly Ontario share, RCSS Ontario YoY sales, traffic, and basket) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 210.80 Td (RCSS Ontario YoY sales,) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 90.00 198.00 Td (traffic, and basket size.) Tj ET
+BT /F1 9 Tf 92.00 289.40 Td (size.) Tj ET
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-282.00 94.00 196.00 330.00 re B
+506.00 282.00 396.00 142.00 re B
 0.000 0.282 0.569 rg
-282.00 414.00 196.00 10.00 re f
+506.00 416.00 396.00 8.00 re f
 0.137 0.153 0.173 rg
-BT /F2 15 Tf 296.00 381.00 Td (2. E-commerce) Tj ET
-0.137 0.153 0.173 rg
-BT /F2 15 Tf 296.00 361.80 Td (capacity) Tj ET
+BT /F2 14 Tf 522.00 386.00 Td (2. E-commerce capacity) Tj ET
 0.000 0.282 0.569 rg
-BT /F2 10 Tf 296.00 336.00 Td (-) Tj ET
+BT /F2 9 Tf 522.00 357.00 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 336.00 Td (Expand pickup/delivery slot) Tj ET
+BT /F1 9 Tf 540.00 357.00 Td (Expand pickup/delivery slot availability around high-demand stores and) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 323.20 Td (availability around high-) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 310.40 Td (demand stores and peak) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 297.60 Td (weeks.) Tj ET
+BT /F1 9 Tf 540.00 345.48 Td (peak weeks.) Tj ET
 0.000 0.282 0.569 rg
-BT /F2 10 Tf 296.00 279.80 Td (-) Tj ET
+BT /F2 9 Tf 522.00 328.96 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 279.80 Td (Improve substitution) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 267.00 Td (quality and availability on) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 254.20 Td (known online baskets.) Tj ET
+BT /F1 9 Tf 540.00 328.96 Td (Improve substitution quality and availability on known online baskets.) Tj ET
 0.000 0.282 0.569 rg
-BT /F2 10 Tf 296.00 236.40 Td (-) Tj ET
+BT /F2 9 Tf 522.00 312.44 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 236.40 Td (KPI: e-com penetration gap) Tj ET
+BT /F1 9 Tf 540.00 312.44 Td (KPI: e-com penetration gap to industry, fulfillment rate, repeat) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 223.60 Td (to industry, fulfillment) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 210.80 Td (rate, repeat online) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 314.00 198.00 Td (shoppers.) Tj ET
+BT /F1 9 Tf 540.00 300.92 Td (online shoppers.) Tj ET
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-506.00 94.00 196.00 330.00 re B
+58.00 114.00 396.00 142.00 re B
 0.855 0.463 0.129 rg
-506.00 414.00 196.00 10.00 re f
+58.00 248.00 396.00 8.00 re f
 0.137 0.153 0.173 rg
-BT /F2 15 Tf 520.00 381.00 Td (3. Value and promo) Tj ET
-0.137 0.153 0.173 rg
-BT /F2 15 Tf 520.00 361.80 Td (discipline) Tj ET
+BT /F2 14 Tf 74.00 218.00 Td (3. Value and promo discipline) Tj ET
 0.855 0.463 0.129 rg
-BT /F2 10 Tf 520.00 336.00 Td (-) Tj ET
+BT /F2 9 Tf 74.00 189.00 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 336.00 Td (Protect key value items and) Tj ET
+BT /F1 9 Tf 92.00 189.00 Td (Protect key value items and sharpen promo where competitive gaps are) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 323.20 Td (sharpen promo where) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 310.40 Td (competitive gaps are) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 297.60 Td (visible.) Tj ET
+BT /F1 9 Tf 92.00 177.48 Td (visible.) Tj ET
 0.855 0.463 0.129 rg
-BT /F2 10 Tf 520.00 279.80 Td (-) Tj ET
+BT /F2 9 Tf 74.00 160.96 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 279.80 Td (Shift from blanket depth to) Tj ET
+BT /F1 9 Tf 92.00 160.96 Td (Shift from blanket depth to targeted, margin-aware offers by market) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 267.00 Td (targeted, margin-aware) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 254.20 Td (offers by market and trip) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 241.40 Td (mission.) Tj ET
+BT /F1 9 Tf 92.00 149.44 Td (and trip mission.) Tj ET
 0.855 0.463 0.129 rg
-BT /F2 10 Tf 520.00 223.60 Td (-) Tj ET
+BT /F2 9 Tf 74.00 132.92 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 223.60 Td (KPI: price index, promo) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 210.80 Td (ROI, gross margin mix,) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 538.00 198.00 Td (customer retention.) Tj ET
+BT /F1 9 Tf 92.00 132.92 Td (KPI: price index, promo ROI, gross margin mix, customer retention.) Tj ET
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-730.00 94.00 196.00 330.00 re B
+506.00 114.00 396.00 142.00 re B
 0.157 0.549 0.353 rg
-730.00 414.00 196.00 10.00 re f
+506.00 248.00 396.00 8.00 re f
 0.137 0.153 0.173 rg
-BT /F2 15 Tf 744.00 381.00 Td (4. Scale what works) Tj ET
+BT /F2 14 Tf 522.00 218.00 Td (4. Scale what works) Tj ET
 0.157 0.549 0.353 rg
-BT /F2 10 Tf 744.00 336.00 Td (-) Tj ET
+BT /F2 9 Tf 522.00 189.00 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 336.00 Td (Study No Frills Atlantic) Tj ET
+BT /F1 9 Tf 540.00 189.00 Td (Study No Frills Atlantic growth drivers: local execution, offer, labor) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 323.20 Td (growth drivers: local) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 310.40 Td (execution, offer, labor) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 297.60 Td (model, and competitive) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 284.80 Td (context.) Tj ET
+BT /F1 9 Tf 540.00 177.48 Td (model, and competitive context.) Tj ET
 0.157 0.549 0.353 rg
-BT /F2 10 Tf 744.00 267.00 Td (-) Tj ET
+BT /F2 9 Tf 522.00 160.96 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 267.00 Td (Replicate transferable) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 254.20 Td (practices in comparable) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 241.40 Td (smaller-base markets.) Tj ET
+BT /F1 9 Tf 540.00 160.96 Td (Replicate transferable practices in comparable smaller-base markets.) Tj ET
 0.157 0.549 0.353 rg
-BT /F2 10 Tf 744.00 223.60 Td (-) Tj ET
+BT /F2 9 Tf 522.00 144.44 Td (-) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 223.60 Td (KPI: market-specific share) Tj ET
+BT /F1 9 Tf 540.00 144.44 Td (KPI: market-specific share lift, sales per store, and execution) Tj ET
 0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 210.80 Td (lift, sales per store, and) Tj ET
-0.118 0.118 0.118 rg
-BT /F1 10 Tf 762.00 198.00 Td (execution scorecards.) Tj ET
+BT /F1 9 Tf 540.00 132.92 Td (scorecards.) Tj ET
 1.000 0.965 0.910 rg
 0.949 0.788 0.573 RG 0.80 w
-58.00 50.00 844.00 28.00 re B
+58.00 48.00 844.00 30.00 re B
 0.137 0.153 0.173 rg
-BT /F2 11 Tf 75.00 57.00 Td (Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.) Tj ET
+BT /F2 11 Tf 75.00 56.00 Td (Next data cuts: margin, store count, price index, loyalty cohorts, online capacity, and competitor density.) Tj ET
 endstream
 endobj
 17 0 obj
@@ -675,7 +623,7 @@ BT /F2 12 Tf 382.00 412.00 Td (What it highlights) Tj ET
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 375.00 Td (supporting_analysis.md) Tj ET
 0.000 0.282 0.569 RG 0.50 w
-62.00 371.00 m 330.00 371.00 l S
+62.00 371.00 m 202.36 371.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and SQL numeric answers.) Tj ET
 1.000 1.000 1.000 rg
@@ -684,7 +632,7 @@ BT /F1 11 Tf 382.00 376.00 Td (Assumptions, key outputs, regional scorecard, and
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 325.00 Td (metric_summary.csv) Tj ET
 0.000 0.282 0.569 RG 0.50 w
-62.00 321.00 m 330.00 321.00 l S
+62.00 321.00 m 176.84 321.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 326.00 Td (KPI summary by division, banner, region, and industry market.) Tj ET
 0.980 0.984 0.992 rg
@@ -693,7 +641,7 @@ BT /F1 11 Tf 382.00 326.00 Td (KPI summary by division, banner, region, and indu
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 275.00 Td (sql_task_answers.sql) Tj ET
 0.000 0.282 0.569 RG 0.50 w
-62.00 271.00 m 330.00 271.00 l S
+62.00 271.00 m 189.60 271.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 276.00 Td (SQL logic for the five case questions and workbook-derived outputs.) Tj ET
 1.000 1.000 1.000 rg
@@ -702,7 +650,7 @@ BT /F1 11 Tf 382.00 276.00 Td (SQL logic for the five case questions and workboo
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 225.00 Td (leadership_presentation_script.md) Tj ET
 0.000 0.282 0.569 RG 0.50 w
-62.00 221.00 m 330.00 221.00 l S
+62.00 221.00 m 272.54 221.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 226.00 Td (Polished talk track for presenting each slide to leadership.) Tj ET
 0.980 0.984 0.992 rg
@@ -711,7 +659,7 @@ BT /F1 11 Tf 382.00 226.00 Td (Polished talk track for presenting each slide to 
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 175.00 Td (super_market_strategy_analytics_case.xlsx) Tj ET
 0.000 0.282 0.569 RG 0.50 w
-62.00 171.00 m 330.00 171.00 l S
+62.00 171.00 m 323.58 171.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 176.00 Td (Downloaded source workbook used for all calculations.) Tj ET
 1.000 1.000 1.000 rg
@@ -720,7 +668,7 @@ BT /F1 11 Tf 382.00 176.00 Td (Downloaded source workbook used for all calculati
 0.000 0.282 0.569 rg
 BT /F2 11 Tf 62.00 125.00 Td (build_loblaw_case_outputs.py) Tj ET
 0.000 0.282 0.569 RG 0.50 w
-62.00 121.00 m 330.00 121.00 l S
+62.00 121.00 m 240.64 121.00 l S
 0.137 0.153 0.173 rg
 BT /F1 11 Tf 382.00 126.00 Td (Reproducible generator for the PDF, HTML, notes, and appendices.) Tj ET
 0.137 0.153 0.173 rg
@@ -736,22 +684,22 @@ BT /F1 10 Tf 94.00 24.20 Td (Recommendations are directional because margin, sto
 endstream
 endobj
 23 0 obj
-<< /Type /Annot /Subtype /Link /Rect [58.00 370.00 343.00 389.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/supporting_analysis.md) >> >>
+<< /Type /Annot /Subtype /Link /Rect [58.00 370.00 210.36 389.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/supporting_analysis.md) >> >>
 endobj
 24 0 obj
-<< /Type /Annot /Subtype /Link /Rect [58.00 320.00 343.00 339.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/metric_summary.csv) >> >>
+<< /Type /Annot /Subtype /Link /Rect [58.00 320.00 184.84 339.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/metric_summary.csv) >> >>
 endobj
 25 0 obj
-<< /Type /Annot /Subtype /Link /Rect [58.00 270.00 343.00 289.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/sql_task_answers.sql) >> >>
+<< /Type /Annot /Subtype /Link /Rect [58.00 270.00 197.60 289.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/sql_task_answers.sql) >> >>
 endobj
 26 0 obj
-<< /Type /Annot /Subtype /Link /Rect [58.00 220.00 343.00 239.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/leadership_presentation_script.md) >> >>
+<< /Type /Annot /Subtype /Link /Rect [58.00 220.00 280.54 239.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/output/leadership_presentation_script.md) >> >>
 endobj
 27 0 obj
-<< /Type /Annot /Subtype /Link /Rect [58.00 170.00 343.00 189.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/source_data/super_market_strategy_analytics_case.xlsx) >> >>
+<< /Type /Annot /Subtype /Link /Rect [58.00 170.00 331.58 189.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/source_data/super_market_strategy_analytics_case.xlsx) >> >>
 endobj
 28 0 obj
-<< /Type /Annot /Subtype /Link /Rect [58.00 120.00 343.00 139.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/scripts/build_loblaw_case_outputs.py) >> >>
+<< /Type /Annot /Subtype /Link /Rect [58.00 120.00 248.64 139.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/kressstul/Loblaws/blob/cursor/loblaw-discount-case-deck-926f/scripts/build_loblaw_case_outputs.py) >> >>
 endobj
 xref
 0 29
@@ -772,20 +720,20 @@ xref
 0000009930 00000 n
 0000013710 00000 n
 0000013848 00000 n
-0000019771 00000 n
-0000019909 00000 n
-0000020299 00000 n
-0000020437 00000 n
-0000022765 00000 n
-0000022955 00000 n
-0000026087 00000 n
-0000026322 00000 n
-0000026553 00000 n
-0000026786 00000 n
-0000027032 00000 n
-0000027291 00000 n
+0000018184 00000 n
+0000018322 00000 n
+0000018712 00000 n
+0000018850 00000 n
+0000021178 00000 n
+0000021368 00000 n
+0000024500 00000 n
+0000024735 00000 n
+0000024966 00000 n
+0000025199 00000 n
+0000025445 00000 n
+0000025704 00000 n
 trailer
 << /Size 29 /Root 1 0 R >>
 startxref
-27533
+25946
 %%EOF
