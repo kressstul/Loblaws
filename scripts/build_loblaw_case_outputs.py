@@ -965,8 +965,9 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     <div class="callout">Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.</div>
   </section>
 
-  <section class="slide thanks">
+  <section class="slide">
     <h1>Thank you</h1>
+    <div class="title-rule"></div>
     <p>Questions?</p>
   </section>
 
@@ -1671,12 +1672,8 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     doc.add_page(page)
 
     # Thank-you page
-    page = PdfPage()
-    page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
-    page.rect(0, 0, 14, page.height, fill=BLUE)
-    page.rect(14, 0, 6, page.height, fill=RED)
-    page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
-    page.text(392, 278, "Questions?", size=24, bold=True, color=RED)
+    page = slide_base("Thank you")
+    page.text(75, 144, "Questions?", size=24, bold=True, color=RED)
     doc.add_page(page)
 
     # SQL task appendix
