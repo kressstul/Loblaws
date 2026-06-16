@@ -1673,8 +1673,8 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     # Thank-you page
     page = PdfPage()
     page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
-    page.rect(0, 0, 20, page.height, fill=BLUE)
-    page.rect(20, 0, 8, page.height, fill=RED)
+    page.rect(0, 0, 14, page.height, fill=BLUE)
+    page.rect(14, 0, 6, page.height, fill=RED)
     page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
     page.text(392, 278, "Questions?", size=24, bold=True, color=RED)
     doc.add_page(page)
