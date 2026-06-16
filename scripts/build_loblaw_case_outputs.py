@@ -1601,14 +1601,28 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         page.text(xs[4], row_y, pts(values["share_delta"]), size=12, bold=True, color=delta_color)
         page.wrapped_text(xs[5], row_y - 1, readouts[region], widths[5], size=11, color=DARK)
         row_y += 58
-    page.rect(58, 410, 398, 52, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
-    page.text(78, 426, "Ontario detail", size=13, bold=True, color=DARK)
-    page.text(78, 450, f"No Frills Ontario: {pct(banners['NO FRILLS ONTARIO']['sales_growth'])} sales growth.", size=11, color=DARK)
-    page.text(78, 470, f"RCSS Ontario: {pct(banners['RCSS ONTARIO']['sales_growth'])} sales growth.", size=11, bold=True, color=RED)
-    page.rect(504, 410, 398, 52, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
-    page.text(524, 426, "E-commerce lens", size=13, bold=True, color=DARK)
-    page.text(524, 450, "Division penetration: " + pct(division["ecom_pen_2020"]) + "; industry: " + pct(industry["ecom_pen_2020"]) + ".", size=11, color=DARK)
-    page.text(524, 470, "Treat e-commerce as a share lever, not only a channel KPI.", size=11, color=DARK)
+    page.rect(58, 394, 398, 88, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+    page.text(78, 412, "Ontario detail", size=13, bold=True, color=DARK)
+    page.wrapped_text(
+        78,
+        438,
+        f"No Frills Ontario: {pct(banners['NO FRILLS ONTARIO']['sales_growth'])} sales growth; RCSS Ontario: {pct(banners['RCSS ONTARIO']['sales_growth'])} sales growth.",
+        350,
+        size=11,
+        color=DARK,
+        leading=15,
+    )
+    page.rect(504, 394, 398, 88, fill=(248, 250, 252), stroke=MID_GREY, stroke_width=0.8)
+    page.text(524, 412, "E-commerce lens", size=13, bold=True, color=DARK)
+    page.wrapped_text(
+        524,
+        438,
+        "Division penetration: " + pct(division["ecom_pen_2020"]) + "; industry: " + pct(industry["ecom_pen_2020"]) + ". Treat e-commerce as a share lever, not only a channel KPI.",
+        350,
+        size=11,
+        color=DARK,
+        leading=15,
+    )
     doc.add_page(page)
 
     # Strategy slide 4
@@ -1667,7 +1681,6 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.rect(0, 0, page.width, page.height, fill=(255, 255, 255))
     page.rect(0, 0, 20, page.height, fill=BLUE)
     page.rect(20, 0, 8, page.height, fill=RED)
-    page.rect(138, 124, 684, 2, fill=YELLOW)
     page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
     page.text(392, 278, "Questions?", size=24, bold=True, color=RED)
     doc.add_page(page)

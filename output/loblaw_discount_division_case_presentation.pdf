@@ -374,22 +374,22 @@ BT /F1 11 Tf 620.00 188.00 Td (Largest base; protect share while pushing) Tj ET
 BT /F1 11 Tf 620.00 173.92 Td (e-com.) Tj ET
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-58.00 78.00 398.00 52.00 re B
+58.00 58.00 398.00 88.00 re B
 0.137 0.153 0.173 rg
-BT /F2 13 Tf 78.00 101.00 Td (Ontario detail) Tj ET
+BT /F2 13 Tf 78.00 115.00 Td (Ontario detail) Tj ET
 0.137 0.153 0.173 rg
-BT /F1 11 Tf 78.00 79.00 Td (No Frills Ontario: 6.3% sales growth.) Tj ET
-0.855 0.161 0.110 rg
-BT /F2 11 Tf 78.00 59.00 Td (RCSS Ontario: -9.6% sales growth.) Tj ET
+BT /F1 11 Tf 78.00 91.00 Td (No Frills Ontario: 6.3% sales growth; RCSS Ontario: -9.6%) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 78.00 76.00 Td (sales growth.) Tj ET
 0.973 0.980 0.988 rg
 0.784 0.808 0.835 RG 0.80 w
-504.00 78.00 398.00 52.00 re B
+504.00 58.00 398.00 88.00 re B
 0.137 0.153 0.173 rg
-BT /F2 13 Tf 524.00 101.00 Td (E-commerce lens) Tj ET
+BT /F2 13 Tf 524.00 115.00 Td (E-commerce lens) Tj ET
 0.137 0.153 0.173 rg
-BT /F1 11 Tf 524.00 79.00 Td (Division penetration: 4.6%; industry: 5.0%.) Tj ET
+BT /F1 11 Tf 524.00 91.00 Td (Division penetration: 4.6%; industry: 5.0%. Treat) Tj ET
 0.137 0.153 0.173 rg
-BT /F1 11 Tf 524.00 59.00 Td (Treat e-commerce as a share lever, not only a channel KPI.) Tj ET
+BT /F1 11 Tf 524.00 76.00 Td (e-commerce as a share lever, not only a channel KPI.) Tj ET
 endstream
 endobj
 15 0 obj
@@ -513,7 +513,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
 endobj
 18 0 obj
-<< /Length 339 >>
+<< /Length 287 >>
 stream
 1.000 1.000 1.000 rg
 0.00 0.00 960.00 540.00 re f
@@ -521,8 +521,6 @@ stream
 0.00 0.00 20.00 540.00 re f
 0.855 0.161 0.110 rg
 20.00 0.00 8.00 540.00 re f
-1.000 0.824 0.000 rg
-138.00 414.00 684.00 2.00 re f
 0.000 0.282 0.569 rg
 BT /F2 52 Tf 328.00 312.00 Td (Thank you) Tj ET
 0.855 0.161 0.110 rg
@@ -722,18 +720,18 @@ xref
 0000013849 00000 n
 0000018185 00000 n
 0000018323 00000 n
-0000018713 00000 n
-0000018851 00000 n
-0000021179 00000 n
-0000021369 00000 n
-0000024501 00000 n
-0000024736 00000 n
-0000024967 00000 n
-0000025200 00000 n
-0000025446 00000 n
-0000025705 00000 n
+0000018661 00000 n
+0000018799 00000 n
+0000021127 00000 n
+0000021317 00000 n
+0000024449 00000 n
+0000024684 00000 n
+0000024915 00000 n
+0000025148 00000 n
+0000025394 00000 n
+0000025653 00000 n
 trailer
 << /Size 29 /Root 1 0 R >>
 startxref
-25947
+25895
 %%EOF
