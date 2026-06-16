@@ -814,14 +814,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       margin: 0;
       color: var(--muted);
     }}
-    .source {{
-      position: absolute;
-      left: 76px;
-      right: 56px;
-      bottom: 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }}
   </style>
 </head>
 <body>
@@ -838,7 +830,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       Context: Discount Division prior to Hard Discount<br>
       Date: June 2026
     </div>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide">
@@ -850,7 +841,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       <div class="agenda-item"><div class="agenda-number">3</div><div><h2>Priority focus areas</h2><p>Why Ontario/RCSS is the near-term priority and Atlantic is the playbook.</p></div></div>
       <div class="agenda-item"><div class="agenda-number">4</div><div><h2>Actions, KPIs, and Q&A</h2><p>Immediate workstreams, success measures, thank-you, and appendix backup.</p></div></div>
     </div>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide">
@@ -869,7 +859,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       <li>E-commerce was the biggest growth engine; closing the industry penetration gap is a near-term share lever.</li>
       <li>No Frills Atlantic is a small-base success case and should be mined for transferable execution lessons.</li>
     </ul>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide">
@@ -899,7 +888,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       <li>Every discount market hit peak e-commerce sales in WE Mar 14 20, indicating a capacity and fulfillment stress test during the demand spike.</li>
       <li>E-commerce penetration is already material at 4.6%; the issue is converting rapid adoption into sustainable market-share capture.</li>
     </ul>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide">
@@ -925,7 +913,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
         </ul>
       </div>
     </div>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide">
@@ -938,13 +925,11 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
       <div class="action green"><h2>4. Scale what works</h2><ul><li>Study No Frills Atlantic growth drivers: local execution, offer, labor model, and competitive context.</li><li>Replicate transferable practices in comparable smaller-base markets.</li><li>KPI: market-specific share lift, sales per store, and execution scorecards.</li></ul></div>
     </div>
     <div class="callout">Next data cuts: store-count normalization, margin, price index, loyalty cohorts, online capacity, and competitor density.</div>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide thanks">
     <h1>Thank you</h1>
     <p>Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?</p>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 
   <section class="slide">
@@ -971,7 +956,6 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
         </ul>
       </div>
     </div>
-    <div class="source">Source: Super Market Strategy & Analytics Case workbook; fictitious case data.</div>
   </section>
 </main>
 </body>
@@ -1230,7 +1214,6 @@ def slide_base(title: str) -> PdfPage:
     page.rect(14, 0, 6, page.height, fill=RED)
     page.text(45, 24, title, size=26, bold=True, color=DARK)
     page.line(45, 70, 915, 70, MID_GREY, width=0.7)
-    page.text(45, 510, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     return page
 
 
@@ -1281,7 +1264,6 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.text(184, 432, "Presented by: Krystal Ng", size=11, color=GREY)
     page.text(184, 452, "Context: Discount Division prior to Hard Discount", size=11, color=GREY)
     page.text(184, 472, "Date: June 2026", size=11, color=GREY)
-    page.text(162, 506, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     doc.add_page(page)
 
     # Agenda
@@ -1506,7 +1488,6 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         leading=25,
     )
     page.text(338, 420, "Questions & discussion", size=18, bold=True, color=RED)
-    page.text(45, 510, "Source: Super Market Strategy & Analytics Case workbook; fictitious case data.", size=8, color=GREY)
     doc.add_page(page)
 
     # Appendix
