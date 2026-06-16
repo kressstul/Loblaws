@@ -534,6 +534,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
     industry = metrics["industry_national"]
     regions = metrics["regions"]
     banners = metrics["banners"]
+    sql = metrics["sql"]
 
     def esc(value: object) -> str:
         return html.escape(str(value))
@@ -551,6 +552,16 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
             f"<td class=\"{delta_class}\">{esc(pts(values['share_delta']))}</td>"
             "</tr>"
         )
+    promo_penetration = sql["industry_promo_penetration"]
+    promo_summary = ", ".join(
+        f"{market.replace('TOTAL ', '').replace(' MARKET', '').title()}: {pct(value)}"
+        for market, value in promo_penetration.items()
+    )
+    ecom_peak_summary = "; ".join(
+        f"{market.replace(' BANNER', '').replace(' TOTAL', '').title()}: {record['Period']} ({money_m(float(record['E-Commerce Sales $ 2020']), 1)})"
+        for market, record in sorted(sql["ecom_peak"].items())
+        if market != "TOTAL DISCOUNT DIVISION (NATIONAL)"
+    )
 
     content = f"""<!doctype html>
 <html lang="en">
@@ -933,6 +944,19 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
   </section>
 
   <section class="slide">
+    <h1>Appendix: SQL task answers</h1>
+    <div class="title-rule"></div>
+    <table>
+      <tr><th>SQL task</th><th>Workbook result / logic</th></tr>
+      <tr><td>1. Average weekly sales for Maxi in 2020</td><td><strong>{esc(money_m(sql['maxi_average_weekly_sales_2020'], 1))}</strong> per week.</td></tr>
+      <tr><td>2. Promo penetration by Industry Market</td><td>{esc(promo_summary)}.</td></tr>
+      <tr><td>3. Highest e-commerce sales week by Discount Market</td><td>All discount markets peaked on <strong>WE Mar 14 20</strong>; values include {esc(ecom_peak_summary)}.</td></tr>
+      <tr><td>4. No Frills Ontario third week of each month</td><td>Use month-level week ranking; example from prompt is Apr: <strong>WE Apr 18 20</strong>, 2019 sales <strong>$118.8M</strong>. Full monthly list is in <code>supporting_analysis.md</code>.</td></tr>
+      <tr><td>5. No Frills Ontario share on WE Jun 27 20</td><td><strong>{esc(pct(sql['no_frills_ontario_share_jun27']))}</strong> = {esc(money_m(sql['no_frills_ontario_jun27_sales'], 1))} / {esc(money_b(sql['total_ontario_jun27_sales'], 2))}.</td></tr>
+    </table>
+  </section>
+
+  <section class="slide">
     <h1>Appendix: supporting analysis files</h1>
     <div class="title-rule"></div>
     <div class="appendix-grid">
@@ -970,6 +994,7 @@ def write_talking_points(metrics: Dict[str, object]) -> None:
     industry = metrics["industry_national"]
     regions = metrics["regions"]
     banners = metrics["banners"]
+    sql = metrics["sql"]
     content = f"""# Slide talking points - Loblaw Discount Division case
 
 Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-you pages are brief framing/transition slides; the core strategy discussion remains the four analysis slides.
@@ -1042,7 +1067,17 @@ Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-yo
 - Offer three prompts if Q&A needs structure: Ontario diagnostic priority, most urgent e-commerce constraint, and highest-value incremental data cut.
 - Reinforce that the recommendations are directional and should be validated with margin, store-count, price-index, and customer-level data.
 
-## Slide 8 - Appendix: supporting analysis files
+## Slide 8 - Appendix: SQL task answers
+
+**Core message:** The requested SQL task is included as backup with the workbook-derived numeric answers.
+
+- Highlight the Maxi answer if asked directly: average weekly sales were {money_m(sql['maxi_average_weekly_sales_2020'], 1)}.
+- Mention that promo penetration is calculated as `SUM(promo_sales_2020) / SUM(sales_2020)` by industry market.
+- Note that all discount markets reached their peak 2020 e-commerce sales on WE Mar 14 20.
+- Explain that No Frills Ontario's WE Jun 27 20 share is {pct(sql['no_frills_ontario_share_jun27'])}, calculated by joining discount and industry rows on period.
+- Keep this slide as appendix/Q&A support; it does not need to be presented in the main flow unless asked.
+
+## Slide 9 - Appendix: supporting analysis files
 
 **Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility after the main close.
 
@@ -1061,7 +1096,8 @@ Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-yo
 - Slide 5: 3 minutes - regional and banner prioritization.
 - Slide 6: 2 minutes - actions, KPIs, and next analysis.
 - Slide 7: 1 minute - thank-you/Q&A transition.
-- Slide 8: backup - appendix pointer if asked for supporting detail.
+- Slide 8: backup - SQL task answers if asked.
+- Slide 9: backup - appendix pointer if asked for supporting detail.
 - Buffer: 1 minute - assumptions and Q&A setup.
 """
     with open(TALKING_POINTS_PATH, "w") as handle:
@@ -1238,6 +1274,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     industry = metrics["industry_national"]
     regions = metrics["regions"]
     banners = metrics["banners"]
+    sql = metrics["sql"]
 
     doc = PdfDocument()
 
@@ -1488,6 +1525,43 @@ def write_pdf(metrics: Dict[str, object]) -> None:
         leading=25,
     )
     page.text(338, 420, "Questions & discussion", size=18, bold=True, color=RED)
+    doc.add_page(page)
+
+    # SQL task appendix
+    page = slide_base("Appendix: SQL task answers")
+    sql_rows = [
+        (
+            "1. Average weekly sales for Maxi in 2020",
+            f"{money_m(sql['maxi_average_weekly_sales_2020'], 1)} per week.",
+        ),
+        (
+            "2. Promo penetration by Industry Market",
+            "Atlantic 35.5%; National 35.2%; Ontario 33.5%; Quebec 33.1%; West 35.5%.",
+        ),
+        (
+            "3. Highest e-commerce sales week by Discount Market",
+            "All discount markets peaked on WE Mar 14 20; Division total was $30.4M.",
+        ),
+        (
+            "4. No Frills Ontario third week of each month",
+            "Use month-level week ranking; example: Apr = WE Apr 18 20, 2019 sales $118.8M.",
+        ),
+        (
+            "5. No Frills Ontario share on WE Jun 27 20",
+            f"{pct(sql['no_frills_ontario_share_jun27'])} = {money_m(sql['no_frills_ontario_jun27_sales'], 1)} / {money_b(sql['total_ontario_jun27_sales'], 2)}.",
+        ),
+    ]
+    page.rect(50, 106, 860, 32, fill=BLUE)
+    page.text(58, 116, "SQL task", size=12, bold=True, color=(255, 255, 255))
+    page.text(382, 116, "Workbook result / logic", size=12, bold=True, color=(255, 255, 255))
+    row_y = 154
+    for idx, (task, result) in enumerate(sql_rows):
+        page.rect(50, row_y - 10, 860, 52, fill=(250, 251, 253) if idx % 2 == 0 else (255, 255, 255), stroke=(230, 234, 238), stroke_width=0.5)
+        page.wrapped_text(62, row_y, task, 270, size=10, bold=True, color=DARK, leading=13)
+        page.wrapped_text(382, row_y, result, 490, size=11, color=DARK, leading=14)
+        row_y += 62
+    page.rect(58, 475, 844, 30, fill=(255, 246, 232), stroke=(242, 201, 146), stroke_width=0.8)
+    page.text(75, 485, "Full SQL query logic and complete monthly third-week list are in sql_task_answers.sql and supporting_analysis.md.", size=10, bold=True, color=DARK)
     doc.add_page(page)
 
     # Appendix

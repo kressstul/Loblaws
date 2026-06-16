@@ -70,7 +70,17 @@ Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-yo
 - Offer three prompts if Q&A needs structure: Ontario diagnostic priority, most urgent e-commerce constraint, and highest-value incremental data cut.
 - Reinforce that the recommendations are directional and should be validated with margin, store-count, price-index, and customer-level data.
 
-## Slide 8 - Appendix: supporting analysis files
+## Slide 8 - Appendix: SQL task answers
+
+**Core message:** The requested SQL task is included as backup with the workbook-derived numeric answers.
+
+- Highlight the Maxi answer if asked directly: average weekly sales were $61.5M.
+- Mention that promo penetration is calculated as `SUM(promo_sales_2020) / SUM(sales_2020)` by industry market.
+- Note that all discount markets reached their peak 2020 e-commerce sales on WE Mar 14 20.
+- Explain that No Frills Ontario's WE Jun 27 20 share is 9.6%, calculated by joining discount and industry rows on period.
+- Keep this slide as appendix/Q&A support; it does not need to be presented in the main flow unless asked.
+
+## Slide 9 - Appendix: supporting analysis files
 
 **Core message:** The appendix provides the audit trail for assumptions, calculations, SQL logic, and reproducibility after the main close.
 
@@ -89,5 +99,6 @@ Use this as a 15-minute speaker guide. The title, agenda, appendix, and thank-yo
 - Slide 5: 3 minutes - regional and banner prioritization.
 - Slide 6: 2 minutes - actions, KPIs, and next analysis.
 - Slide 7: 1 minute - thank-you/Q&A transition.
-- Slide 8: backup - appendix pointer if asked for supporting detail.
+- Slide 8: backup - SQL task answers if asked.
+- Slide 9: backup - appendix pointer if asked for supporting detail.
 - Buffer: 1 minute - assumptions and Q&A setup.

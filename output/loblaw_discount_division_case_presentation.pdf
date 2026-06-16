@@ -4,7 +4,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R] /Count 8 >>
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R] /Count 9 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -591,6 +591,72 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 20 0 R >>
 endobj
 20 0 obj
+<< /Length 2276 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 960.00 540.00 re f
+0.000 0.282 0.569 rg
+0.00 0.00 14.00 540.00 re f
+0.855 0.161 0.110 rg
+14.00 0.00 6.00 540.00 re f
+0.137 0.153 0.173 rg
+BT /F2 26 Tf 45.00 490.00 Td (Appendix: SQL task answers) Tj ET
+0.784 0.808 0.835 RG 0.70 w
+45.00 470.00 m 915.00 470.00 l S
+0.000 0.282 0.569 rg
+50.00 402.00 860.00 32.00 re f
+1.000 1.000 1.000 rg
+BT /F2 12 Tf 58.00 412.00 Td (SQL task) Tj ET
+1.000 1.000 1.000 rg
+BT /F2 12 Tf 382.00 412.00 Td (Workbook result / logic) Tj ET
+0.980 0.984 0.992 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 344.00 860.00 52.00 re B
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 62.00 376.00 Td (1. Average weekly sales for Maxi in 2020) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 375.00 Td ($61.5M per week.) Tj ET
+1.000 1.000 1.000 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 282.00 860.00 52.00 re B
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 62.00 314.00 Td (2. Promo penetration by Industry Market) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 313.00 Td (Atlantic 35.5%; National 35.2%; Ontario 33.5%; Quebec 33.1%; West 35.5%.) Tj ET
+0.980 0.984 0.992 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 220.00 860.00 52.00 re B
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 62.00 252.00 Td (3. Highest e-commerce sales week by Discount) Tj ET
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 62.00 239.00 Td (Market) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 251.00 Td (All discount markets peaked on WE Mar 14 20; Division total was $30.4M.) Tj ET
+1.000 1.000 1.000 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 158.00 860.00 52.00 re B
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 62.00 190.00 Td (4. No Frills Ontario third week of each month) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 189.00 Td (Use month-level week ranking; example: Apr = WE Apr 18 20, 2019 sales $118.8M.) Tj ET
+0.980 0.984 0.992 rg
+0.902 0.918 0.933 RG 0.50 w
+50.00 96.00 860.00 52.00 re B
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 62.00 128.00 Td (5. No Frills Ontario share on WE Jun 27 20) Tj ET
+0.137 0.153 0.173 rg
+BT /F1 11 Tf 382.00 127.00 Td (9.6% = $115.6M / $1.21B.) Tj ET
+1.000 0.965 0.910 rg
+0.949 0.788 0.573 RG 0.80 w
+58.00 35.00 844.00 30.00 re B
+0.137 0.153 0.173 rg
+BT /F2 10 Tf 75.00 45.00 Td (Full SQL query logic and complete monthly third-week list are in sql_task_answers.sql and supporting_analysis.md.) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 22 0 R >>
+endobj
+22 0 obj
 << /Length 2422 >>
 stream
 1.000 1.000 1.000 rg
@@ -657,30 +723,32 @@ BT /F1 10 Tf 94.00 24.20 Td (Recommendations are directional because margin, sto
 endstream
 endobj
 xref
-0 21
+0 23
 0000000000 65535 f
 0000000015 00000 n
 0000000064 00000 n
-0000000168 00000 n
-0000000238 00000 n
-0000000313 00000 n
-0000000449 00000 n
-0000001459 00000 n
-0000001595 00000 n
-0000003485 00000 n
-0000003622 00000 n
-0000006424 00000 n
-0000006562 00000 n
-0000009785 00000 n
-0000009923 00000 n
-0000013703 00000 n
-0000013841 00000 n
-0000019764 00000 n
-0000019902 00000 n
-0000020656 00000 n
-0000020794 00000 n
+0000000175 00000 n
+0000000245 00000 n
+0000000320 00000 n
+0000000456 00000 n
+0000001466 00000 n
+0000001602 00000 n
+0000003492 00000 n
+0000003629 00000 n
+0000006431 00000 n
+0000006569 00000 n
+0000009792 00000 n
+0000009930 00000 n
+0000013710 00000 n
+0000013848 00000 n
+0000019771 00000 n
+0000019909 00000 n
+0000020663 00000 n
+0000020801 00000 n
+0000023129 00000 n
+0000023267 00000 n
 trailer
-<< /Size 21 /Root 1 0 R >>
+<< /Size 23 /Root 1 0 R >>
 startxref
-23268
+25741
 %%EOF
