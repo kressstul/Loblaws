@@ -565,7 +565,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
 endobj
 18 0 obj
-<< /Length 703 >>
+<< /Length 339 >>
 stream
 1.000 1.000 1.000 rg
 0.00 0.00 960.00 540.00 re f
@@ -577,14 +577,8 @@ stream
 138.00 414.00 684.00 2.00 re f
 0.000 0.282 0.569 rg
 BT /F2 52 Tf 328.00 312.00 Td (Thank you) Tj ET
-0.137 0.153 0.173 rg
-BT /F1 17 Tf 192.00 263.00 Td (Discussion prompts: Which Ontario diagnostic should we prioritize) Tj ET
-0.137 0.153 0.173 rg
-BT /F1 17 Tf 192.00 238.00 Td (first? What e-commerce constraint is most urgent? What additional) Tj ET
-0.137 0.153 0.173 rg
-BT /F1 17 Tf 192.00 213.00 Td (data would most change the recommendation?) Tj ET
 0.855 0.161 0.110 rg
-BT /F2 18 Tf 338.00 102.00 Td (Questions & discussion) Tj ET
+BT /F2 24 Tf 392.00 238.00 Td (Questions?) Tj ET
 endstream
 endobj
 19 0 obj
@@ -768,17 +762,17 @@ xref
 0000013848 00000 n
 0000019771 00000 n
 0000019909 00000 n
-0000020663 00000 n
-0000020801 00000 n
-0000023129 00000 n
-0000023312 00000 n
-0000026091 00000 n
-0000026326 00000 n
-0000026557 00000 n
-0000026790 00000 n
-0000027049 00000 n
+0000020299 00000 n
+0000020437 00000 n
+0000022765 00000 n
+0000022948 00000 n
+0000025727 00000 n
+0000025962 00000 n
+0000026193 00000 n
+0000026426 00000 n
+0000026685 00000 n
 trailer
 << /Size 28 /Root 1 0 R >>
 startxref
-27291
+26927
 %%EOF

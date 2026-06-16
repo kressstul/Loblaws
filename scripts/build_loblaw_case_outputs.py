@@ -959,7 +959,7 @@ def write_html_preview(metrics: Dict[str, object]) -> None:
 
   <section class="slide thanks">
     <h1>Thank you</h1>
-    <p>Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?</p>
+    <p>Questions?</p>
   </section>
 
   <section class="slide">
@@ -1547,16 +1547,7 @@ def write_pdf(metrics: Dict[str, object]) -> None:
     page.rect(20, 0, 8, page.height, fill=RED)
     page.rect(138, 124, 684, 2, fill=YELLOW)
     page.text(328, 176, "Thank you", size=52, bold=True, color=BLUE)
-    page.wrapped_text(
-        192,
-        260,
-        "Discussion prompts: Which Ontario diagnostic should we prioritize first? What e-commerce constraint is most urgent? What additional data would most change the recommendation?",
-        600,
-        size=17,
-        color=DARK,
-        leading=25,
-    )
-    page.text(338, 420, "Questions & discussion", size=18, bold=True, color=RED)
+    page.text(392, 278, "Questions?", size=24, bold=True, color=RED)
     doc.add_page(page)
 
     # SQL task appendix
