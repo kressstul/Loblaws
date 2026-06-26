@@ -46,7 +46,7 @@ In short: Levitate helps you save time, stay top-of-mind, and drive better outco
 If helpful, I can walk you through 2-3 starter use cases tailored to your goals.
 
 Best,  
-[Your Name]
+Krystal
 
 ### Internal Actions
 **Before sending:** Clarify goals, current workflow, and pain points; prioritize only relevant capabilities.  
