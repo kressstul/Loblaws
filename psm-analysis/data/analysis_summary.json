@@ -1,0 +1,46 @@
+{
+  "s1_n": 403,
+  "s1_unique_mls": 201,
+  "s1_status": {
+    "Approved - Complete": 273,
+    "Cancelled": 27,
+    "Pending - Broker": 33,
+    "New": 11,
+    "Pending - MLS": 31,
+    "Approved - Provisioning": 21,
+    "Ready for Compliance": 1,
+    "Blocked": 1,
+    "Pending - Compliance Mod": 2,
+    "Pending - CWS": 3
+  },
+  "s1_access": {
+    "IDX": 202,
+    "Back Office": 196,
+    "VOW": 5
+  },
+  "s1_complete_pct": 67.7,
+  "s1_cancel_pct": 6.7,
+  "s1_cycle_median": 98.0,
+  "s1_cycle_mean": 87.1,
+  "s2_n": 565,
+  "s2_unique_mls": 325,
+  "s2_feed_types": {
+    "Data Feed Type - Member Initiated with MLS": 47,
+    "Data Feed Type - CWS Initiated with MLS": 131,
+    "Data Feed Type - Hard Copy Agreement": 152,
+    "Data Feed Type - Electronic Trestle Agreement": 88,
+    "Feed Type - Hard Copy Agreement": 10,
+    "Feed Type - CWS Initiated with MLS": 20,
+    "Data Feed Type - Electronic Grid Agreement": 60,
+    "Data Feed Type - Member Initiated with MLS Portal": 46,
+    "Feed Type - Electronic Trestle Agreement": 8,
+    "Feed Type - Member Initiated with MLS": 3
+  },
+  "s2_products": {
+    "IDX Feed": 348,
+    "VOW Feed": 63,
+    "Back Office Feed": 154
+  },
+  "s2_days_median": 17,
+  "overlap_mls": 140
+}
